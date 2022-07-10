@@ -331,6 +331,10 @@ form input[type="submit"]{
 }
 
 @media screen and (min-width:1000px){ 
+    .AddressContainer{
+        display: block;
+    }
+    
     .FormContainer{
         width: 70%;
     }
