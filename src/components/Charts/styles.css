@@ -1,0 +1,11 @@
+.MainContainer{
+    /* display: grid;
+    grid-template-columns: 20% 80%; */
+}
+
+.ChartsContainer{
+    background-image: linear-gradient(#02181C, #02181C);
+    height: 100vh;
+    padding: 30px;
+}
+

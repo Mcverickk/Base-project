@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');  
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.MainContainer{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.SwapContainer{
+    background-image: linear-gradient(#02181C, #02181C);
+    height: 100vh;
+    padding: 30px;
+}
+
+.AddressContainer{
+    width: 15%;
+    margin: auto 0px auto auto;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid rgba(213, 213, 213, 0.2);
+    border-radius: 18px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9em;
+    text-align: center;
+    overflow: hidden;
+}
+
+.FormContainer{ 
+    float: none;
+    margin: 1% auto;
+    width: 40%;
+}
+
+.FormContainer h1{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: 'Poppins';
+    font-style: normal;
+    color: #fff;
+}
+
+.FormContainer form{
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top:22px;
+    background: #171717;
+    box-shadow: 0px 1px 2px rgba(120, 120, 120, 0.3), 0px 0px 3px rgba(167, 167, 167, 0.35);
+    border-radius: 18px;
+}
+
+form input{
+    padding:20px;
+    background: #323232;
+    border: 1px solid #4B4B4B;
+    border-radius: 16px;
+    margin-bottom: 6px;
+}
+
+form input[type="submit"]{
+    background: linear-gradient(269.56deg, #CEF287 14.68%, #0EE9E8 90.69%);
+    border-radius: 16px;
+    padding:20px;
+    text-transform: uppercase;
+    font-family: 'Poppins';
+    font-style: normal;
+    margin-top: 18px;
+    font-weight: 600;
+    font-size: 0.8em;
+    align-items: center;
+    letter-spacing: 0.75px;
+    color: #000000;
+}
+
+.EllipseOne{
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    z-index: -  1;
+    margin-left: 50px;
+    background: #157D7F;
+    filter: blur(70px);
+}
+
+.EllipseTwo{
+    position: absolute;
+    width: 30%;
+    height: 8%;
+    z-index: -  1;
+    margin-left: 50px;
+    background: #CEF287;
+    opacity: 0.5;
+    filter: blur(80px);
+}
+
+.Data{
+    margin-top: 40px;
+    display: grid;
+    padding-left: 20px;
+    grid-template-columns: auto auto;
+    font-size: 2em;
+}
+
+.DataValues1{
+    font-family:'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    font-size: 0.4em;
+}
+
+.DataValues2{
+    font-family:'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    font-size: 0.4em;
+}
+
+.dataValues{
+    margin-bottom: 19px;
+}
+
+
+@media screen and (min-width:320px) and (max-width:760px){
+    .MainContainer{
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .SwapContainer{
+        background-image: linear-gradient(#02181C, #02181C);
+        height: 100vh;
+        padding: 30px;
+    }
+    
+    .AddressContainer{
+        width: 15%;
+        margin: auto 10px auto auto;
+        padding: 10px;
+        color: #fff;
+        border: 2px solid rgba(213, 213, 213, 0.2);
+        border-radius: 18px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    .FormContainer{ 
+        float: none;
+        margin: 1% auto;
+        width: 40%;
+    }
+    
+    .FormContainer h1{
+        text-transform: uppercase;
+        font-weight: 900;
+        font-family: 'Poppins';
+        font-style: normal;
+        color: #fff;
+    }
+    
+    .FormContainer form{
+        position: relative;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        margin-top:22px;
+        background: #171717;
+        box-shadow: 0px 1px 2px rgba(120, 120, 120, 0.3), 0px 0px 3px rgba(167, 167, 167, 0.35);
+        border-radius: 18px;
+    }
+    
+    form input{
+        padding:20px;
+        background: #323232;
+        border: 1px solid #4B4B4B;
+        border-radius: 16px;
+        margin-bottom: 6px;
+    }
+    
+    form input[type="submit"]{
+        background: linear-gradient(269.56deg, #CEF287 14.68%, #0EE9E8 90.69%);
+        border-radius: 16px;
+        padding:20px;
+        text-transform: uppercase;
+        font-family: 'Poppins';
+        font-style: normal;
+        margin-top: 18px;
+        font-weight: 600;
+        align-items: center;
+        letter-spacing: 0.75px;
+        color: #000000;
+    }
+    
+    .EllipseOne{
+        position: absolute;
+        width: 30%;
+        height: 10%;
+        z-index: -  1;
+        margin-left: 50px;
+        background: #157D7F;
+        filter: blur(70px);
+    }
+    
+    .EllipseTwo{
+        position: absolute;
+        width: 30%;
+        height: 8%;
+        z-index: -  1;
+        margin-left: 50px;
+        background: #CEF287;
+        opacity: 0.5;
+        filter: blur(80px);
+    }
+    
+    .Data{
+        margin-top: 50px;
+        display: grid;
+        padding-left: 20px;
+        grid-template-columns: auto auto;
+    }
+    
+    .DataValues1{
+        font-family:'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        color: #FFFFFF;
+    }
+    
+    .DataValues2{
+        font-family:'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        color: #FFFFFF;
+    }
+    
+    .dataValues{
+        margin-bottom: 19px;
+    }
+}
+
+
+@media screen and (min-width:320px){ 
+    .AddressContainer{
+        display:none;
+    }
+
+    .FormContainer{ 
+        width: 100%;
+    }
+
+    .FormContainer form{
+        padding: 10px;
+    }
+
+    form input[type="submit"]{
+        margin-top: 8px;
+        font-size: 0.6em;
+    }
+
+    .Data{
+        margin-top: 30px;
+        font-size: 1.6em;
+    }
+}
+
+@media screen and (min-width:425px){ 
+
+    form input[type="submit"]{
+        margin-top: 8px;
+        font-size: 0.7em;
+    }
+
+    .Data{
+        font-size: 1.7em;
+    }
+
+    .SwapContainer{
+        padding: 40px;
+    }
+}
+
+@media screen and (min-width:550px){ 
+
+    form input[type="submit"]{
+        margin-top: 8px;
+        font-size: 0.8em;
+    }
+
+    .SwapContainer{
+        padding: 50px;
+    }
+
+    .Data{
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (min-width:768px){ 
+    .FormContainer{
+        width: 80%;
+    }
+    
+    form input[type="submit"]{
+        margin-top: 8px;
+        font-size: 0.8em;
+    }
+
+    .SwapContainer{
+        padding: 42px 50px;
+    }
+
+    .Data{
+        font-size: 1.8em;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (min-width:1000px){ 
+    .FormContainer{
+        width: 70%;
+    }
+    
+    form input[type="submit"]{
+        margin-top: 8px;
+        font-size: 0.85em;
+    }
+
+    .SwapContainer{
+        padding: 42px 50px;
+    }
+
+    .Data{
+        font-size: 1.9em;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (min-width:1400px){ 
+    .FormContainer{
+        width: 60%;
+    }
+    
+    form input[type="submit"]{
+        margin-top: 8px;
+        font-size: 0.9em;
+    }
+
+    .SwapContainer{
+        padding: 42px 50px;
+    }
+
+    .Data{
+        font-size: 1.95em;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (min-width:1500px){ 
+    .FormContainer{
+        width: 50%;
+    }
+    
+    form input[type="submit"]{
+        margin-top: 8px;
+        font-size: 1em;
+    }
+
+    .SwapContainer{
+        padding: 42px 50px;
+    }
+
+    .Data{
+        font-size: 2em;
+        margin-top: 40px;
+    }
+}

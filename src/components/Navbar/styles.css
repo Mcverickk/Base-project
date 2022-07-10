@@ -1,0 +1,12 @@
+.NavbarContainer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #02181C;
+    padding:20px
+}
+
+@media screen and (min-width:768px) {
+    .NavbarContainer{
+        display: none;
+    }
+}

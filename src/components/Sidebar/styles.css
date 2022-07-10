@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');  
+
+.SidebarContainer{
+    background-color: #000505;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Poppins';
+    font-style: normal;
+}
+
+.navlinks{
+    padding: 40% 0% 0% 20%;
+    height: 60%;
+    font-size: 2em;
+}
+
+.nav-links{
+    margin-bottom: 27px;
+    font-size: 0.6em;
+}
+
+.supportlinks{
+    padding: 20% 0% 0% 20%;
+    height: 40%;
+    font-size: 1em;
+}
+
+
+.logo{
+    padding: 30px;
+    color: #fff;
+    margin-top: 30px;
+    background: url(image.png);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain;
+    /* background-size: cover; Resize the background image to cover the entire container */
+}
+
+.supportlinks > li:nth-of-type(1){
+    margin-bottom: 40px;
+}
+
+.supportlinks > li:nth-of-type(2){
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width:320px) and (max-width:767px){
+    .SidebarContainer{
+        display: none;
+    }
+}
+
+@media screen and (min-width:768px){
+    .navlinks{
+        font-size: 1.5em;
+    }  
+    
+    .supportlinks{
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (min-width:1000px){
+    .navlinks{
+        font-size: 1.7em;
+    }  
+    
+    .supportlinks{
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (min-width:1400px){
+
+    .navlinks{
+        font-size: 1.9em;
+    }  
+    
+    .supportlinks{
+        font-size: 0.95em;
+    }
+}
+
+@media screen and (min-width:1500px){
+    .navlinks{
+        font-size: 2em;
+    }  
+    
+    .supportlinks{
+        font-size: 1em;
+    }
+}
+
+
