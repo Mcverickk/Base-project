@@ -1,39 +1,18 @@
-import React from 'react'
+import Aos from 'aos'
+import "aos/dist/aos.css";
+import React,{useEffect} from 'react'
 import Navbar from '../Navbar/Navbar'
 import SideBar from '../Sidebar/SideBar'
 import './styles.css'
+import { DataTags } from './SwapData'
+import { DataTags2 } from './SwapData'
+
 
 function Swap() {
 
-  const DataTags = [
-    {
-      title:'Best Rate Guarantee'
-    },
-    {
-      title:'Slippage'
-    },
-    {
-      title:'GAS Fee'
-    },
-    {
-      title:'Route'
-    }
-  ]
-
-  const DataTags2 = [
-    {
-      title:'Best Rate Guarantee'
-    },
-    {
-      title:'Slippage'
-    },
-    {
-      title:'GAS Fee'
-    },
-    {
-      title:'Route'
-    }
-  ]
+  useEffect(()=>{Aos.init({
+    duration:1000
+  })},[])
 
   return ( 
       <>
@@ -44,11 +23,11 @@ function Swap() {
         </div>
       
         <div className='SwapContainer'>
-          <div className='AddressContainer'>Address</div>
+          <div data-aos="zoom-in" className='AddressContainer'>Address</div>
           <div className='FormContainer'>
             <div className='EllipseOne'></div>
-            <h1>Swap</h1>
-            <form>
+            <h1 data-aos="fade-right">Swap</h1>
+            <form data-aos="fade-left">
               <input></input>
               <input></input>
               <input type='submit' value="CONFIRM SWAP"></input>
@@ -56,14 +35,14 @@ function Swap() {
             <div className='EllipseTwo'></div>
 
             <div className='Data'>
-              <div className='DataValues1'>
+              <div data-aos="fade-down" data-aos-delay="500" className='DataValues1'>
                 { DataTags.map((item,index) => {
                   return (
                     <span className="dataValues" key={index}>{item.title}</span>
                   )
                 })}
               </div>
-              <div className='DataValues2'>
+              <div data-aos="fade-up" data-aos-delay="1000" className='DataValues2'>
                 { DataTags2.map((item,index) => {
                   return (
                     <span className="dataValues" key={index}>{item.title}</span>

@@ -1,4 +1,6 @@
-import React from 'react';
+import Aos from 'aos'
+import "aos/dist/aos.css";
+import React,{useEffect} from 'react';
 import {  NavLink } from "react-router-dom";
 import { SideBarData } from './SideBarData';
 import { SupportData } from './SupportData';
@@ -6,6 +8,11 @@ import './styles.css'
 
 
 function SideBar() {
+
+  
+  useEffect(()=>{Aos.init({
+    duration:1000
+  })},[])
 
   const activeLinkStyles = ({isActive}) => { 
     return {
@@ -19,7 +26,7 @@ function SideBar() {
         
         <div className='logo'></div>
         
-        <div className='navlinks'>
+        <div data-aos="fade-up" className='navlinks'>
         { SideBarData.map((item, index) => {
               return (
                 <li className="nav-links" key={index}>
@@ -31,7 +38,7 @@ function SideBar() {
             })}
         </div>
         
-        <div className='supportlinks'>
+        <div data-aos="fade-down" data-aos-delay="1000" className='supportlinks'>
             { SupportData.map((item,index)=>{
                 return(
                   <li key={index}>
