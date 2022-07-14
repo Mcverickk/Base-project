@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Swap from './components/Swap/Swap';
-import Pools from './components/Pools/Pools';
-import Charts from './components/Charts/Charts';
+import Liquidity from './components/Liquidity/Liquidity';
+import Farms from './components/Farms/Farms';
+import Homepage from "./components/Homepage/Homepage";
 
 
 function App() {
@@ -9,9 +10,10 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path='/' element={<Swap />} />
-          <Route path='/pools' element={<Pools />} />
-          <Route path='/charts' element={<Charts />} />
+          <Route path='/' element={<Homepage />} />
+          <Route path='/swap' element={<Swap />} />
+          <Route path='/liquidity' element={<Liquidity />} />
+          <Route path='/farms' element={<Farms />} />
         </Routes>
       </Router>
     </div>

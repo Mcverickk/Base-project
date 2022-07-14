@@ -1,16 +1,22 @@
 export const SupportData = [
     {
         title:'HELP',
-        path:'/help'
+        path:'/help',
+        data:'fade-down',
+        delay:'300'
     },
     
     {
         title:'Support',
-        path:'/support'
+        path:'/support',
+        data:'fade-right',
+        delay:'900'
     },
     
     {
         title:'Website',
-        path:'/website'
+        path:'/website',
+        data:'fade-left',
+        delay:'1000'
     }
 ]

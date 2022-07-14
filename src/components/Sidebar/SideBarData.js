@@ -1,14 +1,20 @@
 export const SideBarData = [
     {
       title: 'Swap',
-      path: '/',
+      path: '/swap',
+      data:'fade-right',
+      delay:'300'
     },
     {
-      title: 'Pools',
-      path: '/pools',
+      title: 'Liquidity',
+      path: '/liquidity',
+      data:'fade-left',
+      delay:'900'
     },
     {
-      title: 'Charts',
-      path: '/charts',
+      title: 'Farms',
+      path: '/farms',
+      data:'fade-right',
+      delay:'1500'
     },
   ];
