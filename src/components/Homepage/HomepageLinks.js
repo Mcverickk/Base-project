@@ -1,27 +1,32 @@
 export const Links = [
     {
         title:'Swap',
-        path:'/swap'
+        path:'/swap',
+        delay:200
     },
 
     {
         title:'/',
-        path:'/swap'
+        path:'/swap',
+        delay:200
     },
     
     {
         title:'Liquidity',
-        path:'/liquidity'
+        path:'/liquidity',
+        delay:600
     },
 
     {
         title:'/',
-        path:'/liquidity'
+        path:'/liquidity',
+        delay:600
     },
 
     {
         title:'Farms',
-        path:'/farms'
+        path:'/farms',
+        delay:1000
     }
     
 ]

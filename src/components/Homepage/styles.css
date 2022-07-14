@@ -1,119 +1,506 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100&display=swap');
 
 nav{
-    /* border: 2px red solid; */
     display: flex;
     justify-content:space-between ;
     background: #02181C;
-    padding: 30px;
+    padding: 10px 50px 10px 50px;
+    align-items: center;
 }
 
 .Links{
     font-family: 'Poppins';
     font-weight: 400;
-    font-size: 19px;
-    line-height: 28px;
+    font-size: 1em;
     text-align: center;
     color: rgba(255, 255, 255, 0.5);
     display: flex;
     justify-content: space-between;
     width: 30%;
-    padding-top: 10px;
+    padding-top: 15px;
+    margin-left: -8%;
 }
 
+.TextContainer{
+    background: #02181C;
+    text-align: center;
+    /* border: 2px blue solid; */
+    font-size: 5em;
+    padding-top: 0.6em;
+}
 
-/* .blur1{
+.TextContainer > div:nth-child(1){
+    width: 40%;
+    margin-left: auto;
+}
+
+.TextContainer > div:nth-child(1) > img:nth-child(2){
+    margin: 5% 0% 0% 35%;
+}
+
+.blur1{
     background: #CEF287;
     filter: blur(500px);
     width: 443px;
     height: 140px;
-    border: 2px red solid;
-} */
-
-.TextContainer{
-    /* border: 2px red solid; */
-    background: #02181C;
-    text-align: center;
 }
 
-.TextContainer > div:nth-child(1)
+/* Coming Soon */
+.TextContainer > div:nth-child(2)  
 {
     font-family: 'Poppins';
-    /* font-style: normal; */
-    font-weight: 800;
-    font-size: 116px;
-    line-height: 174px;
+    font-weight: 900;
+    font-size: 1.4em;
     text-align: center;
     background: linear-gradient(90.73deg, #CEF287 34.94%, #0EE9E8 80.09%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    padding-top: 50px;
 }
 
-.TextContainer > div:nth-child(2)
+
+/* The Front Page ... */
+.TextContainer > div:nth-child(3)
 {
-    /* font-family: 'Spartan'; */
-    font-style: normal;
-    margin-top: 30px;
+    width: 50%;
+    margin: 0.2em auto;
     font-family: 'League Spartan', sans-serif;
-    font-weight: 700;
-    font-size: 31px;
-    line-height: 35px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 0.3em;
     color: #FFFFFF;
 }
 
-.TextContainer > div:nth-child(3){
+.TextContainer > div:nth-child(3) > img
+{
+    margin-top: 20px;
+    float: left;
+}
+
+
+/* Input Field */
+.TextContainer > div:nth-child(4){
     background: #000000;
-    /* margin-top: 60px; */
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 0px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 1px 5px white;
     border-radius: 24px;
     width: 30%;
-    margin: 60px auto 0px auto;
+    margin: 0.4em auto 0px auto;
     padding: 10px;
     display: flex;
     justify-content: space-between;
 }
 
-.TextContainer > div:nth-child(3) > button{
-    background: #FFFFFF;
-    border-radius: 16px;
-    padding: 15px;
-}
-
-.TextContainer > div:nth-child(3) > input{
+.TextContainer > div:nth-child(4) > input{
     background: transparent;
     border-radius: 16px;
-    padding: 15px;
+    padding: 5px;
     font-family: 'League Spartan';
     font-style: normal;
     font-weight: 500;
-    font-size: 22px;
-    line-height: 25px;
+    font-size: 0.25em;
     color: #FFFFFF;
     outline: none;
 }
 
-.TextContainer > div:nth-child(4){
+.TextContainer > div:nth-child(4) > button{
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 5px 10px 10px 5px;
+    font-size: 0.2em;
+}
+
+/* No worries ... */
+.TextContainer > div:nth-child(5){
     font-family: 'League Spartan';
     font-style: normal;
     font-weight: 400;
-    font-size: 22px;
-    line-height: 25px;
+    margin-top: 0.5em;
+    font-size: 0.25em;
     color: #FFFFFF;
     opacity: 0.5;
-    margin-top: 30px;
+}
+
+
+/* Img4 */
+.TextContainer > div:nth-child(6){
+    width: 30%;
+    margin-left: auto;
+}
+
+.blur2{
+    background: red;
+    filter: blur(5px);
 }
 
 footer{
     text-align: center;
-    /* border: 2px red solid; */
     background: #02181C;
-    padding: 83px 20px 20px 20px;
+    padding: 60px 20px 20px 20px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
     color: #FFFFFF;
-
+    font-size: 1em;
+    /* border: 2px red solid; */
 }
+
+@media screen and (min-width:320px) {
+    nav{
+        padding: 10px 0px 0px 0px;
+        flex-direction: column;
+    }
+
+    nav > img{
+        height: 3em;
+        width: 6em;
+    }
+
+    .twitter{
+        display: none;
+    }
+
+    .Links{
+        width: 90%;
+        margin: auto;
+    }
+    
+    .TextContainer{
+        font-size: 2em;
+        margin-top: 15%;
+    }
+
+    .TextContainer > div:nth-child(1){
+        width: 50%;
+    }
+    
+    .TextContainer > div:nth-child(2){
+        width: 100%;
+        font-size: 1.5em;
+    }
+    
+    .TextContainer > div:nth-child(3){
+        width: 100%;
+        font-size: 0.5em;
+    }
+
+    .TextContainer > div:nth-child(3) >img{
+        display: none;
+    }
+
+    .TextContainer > div:nth-child(4){
+        width: 90%;
+        font-size: 1em;
+    }
+
+    .TextContainer > div:nth-child(4) > input{
+        font-size: 0.4em;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .TextContainer > div:nth-child(4) >button{
+        font-size: 0.5em;
+        width: 40%;
+        margin: auto;
+        padding: 2px ;
+    }
+
+    .TextContainer > div:nth-child(5){
+        width: 100%;
+        font-size: 0.5em;
+    }
+
+    footer{
+        font-size: 0.7em;
+        padding:70px 10px 0px 10px ;
+    }
+}
+
+
+
+@media screen and (min-width:375px) {   
+    
+    .TextContainer{
+        width: 90%;
+        font-size: 2em;
+        margin: 12% auto 0% auto;
+    }
+
+    .TextContainer > div:nth-child(2){
+        font-size: 1.6em;
+    }
+
+    .TextContainer > div:nth-child(4){
+        width: 90%;
+        font-size: 1.2em;
+    
+    }
+    
+    .TextContainer > div:nth-child(4) > input{
+        width: 100%;
+        font-size: 0.4em;
+    }
+
+    .TextContainer > div:nth-child(4) > button{
+        width: 60%;
+        font-size: 0.4em;
+        font-weight: 500;
+    }
+   
+    footer{
+        font-size: 0.7em;
+        padding:50px 10px 0px 10px;
+    }
+}
+
+@media screen and (min-width:425px) and (max-width:600px) {   
+    .TextContainer{
+        width: 90%;
+        font-size: 2em;
+        margin: 10% auto 0% auto;
+    }
+
+    .TextContainer > div:nth-child(2){
+        font-size: 1.8em;
+    }
+    
+    .TextContainer > div:nth-child(3) >img{
+        display: block;
+    }
+
+    .TextContainer > div:nth-child(4){
+        width: 90%;
+        font-size: 1.2em;
+    }
+    
+    .TextContainer > div:nth-child(4) > input{
+        width: 100%;
+        font-size: 0.4em;
+    }
+
+    .TextContainer > div:nth-child(4) > button{
+        width: 60%;
+        font-size: 0.4em;
+        font-weight: 500;
+    }
+    
+    footer{
+        font-size: 0.7em;
+        padding:50px 10px 0px 10px ;
+    }
+}
+
+
+@media screen and (min-width:600px) {
+    .TextContainer{
+        width: 90%;
+        font-size: 2.5em;
+        margin: 12% auto 0% auto;
+    }
+
+    .TextContainer > div:nth-child(2){
+        font-size: 1.8em;
+    }
+    
+    .TextContainer > div:nth-child(3) >img{
+        display: block;
+    }
+
+    .TextContainer > div:nth-child(4){
+        width: 60%;
+        font-size: 1.2em;
+    }
+    
+    .TextContainer > div:nth-child(4) > input{
+        width: 100%;
+        font-size: 0.35em;
+    }
+
+    .TextContainer > div:nth-child(4) > button{
+        width: 60%;
+        font-size: 0.4em;
+        font-weight: 500;
+    }
+    
+    footer{
+        font-size: 0.7em;
+        padding:40px 10px 0px 10px ;
+    }   
+}
+
+
+@media screen and (min-width:768px) {
+    nav{
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+    }
+
+    .Links{
+        width: 50%;
+    }
+
+    .twitter{
+        display: block;
+    }
+    
+    .TextContainer{
+        width: 90%;
+        font-size: 2.5em;
+        margin: 8% auto 0% auto;
+    }
+
+    .TextContainer > div:nth-child(2){
+        font-size: 1.8em;
+    }
+    
+    .TextContainer > div:nth-child(3) >img{
+        display: block;
+    }
+
+    .TextContainer > div:nth-child(4){
+        width: 60%;
+        font-size: 1.2em;
+    }
+    
+    .TextContainer > div:nth-child(4) > input{
+        width: 100%;
+        font-size: 0.35em;
+    }
+
+    .TextContainer > div:nth-child(4) > button{
+        width: 60%;
+        font-size: 0.4em;
+        font-weight: 500;
+    }
+    
+    footer{
+        font-size: 0.7em;
+        padding:50px 10px 0px 10px ;
+    }   
+}
+
+
+@media screen and (min-width:1024px) {
+    nav{
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+    }
+
+    .Links{
+        width: 50%;
+    }
+
+    .twitter{
+        display: block;
+    }
+    
+    .TextContainer{
+        width: 80%;
+        font-size: 3em;
+        margin: 5% auto 0% auto;
+    }
+
+    .TextContainer > div:nth-child(2){
+        font-size: 2em;
+    }
+    
+    .TextContainer > div:nth-child(3) >img{
+        display: block;
+    }
+
+    .TextContainer > div:nth-child(4){
+        width: 60%;
+        font-size: 1.2em;
+    }
+    
+    .TextContainer > div:nth-child(4) > input{
+        width: 100%;
+        font-size: 0.35em;
+    }
+
+    .TextContainer > div:nth-child(4) > button{
+        width: 60%;
+        font-size: 0.4em;
+        font-weight: 500;
+    }
+    
+    footer{
+        font-size: 0.8em;
+        padding:40px 10px 20px 10px ;
+    }   
+}
+
+
+@media screen and (min-width:1440px) {
+    nav{
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        /* border: 2px red solid; */
+    }
+
+    .Links{
+        width: 50%;
+    }
+
+    .twitter{
+        display: block;
+    }
+    
+    .TextContainer{
+        width: 80%;
+        font-size: 2.8em;
+        margin: 2% auto 0% auto;
+        /* border: 2px red solid; */
+    }
+
+    .TextContainer > div:nth-child(1){
+        width: 40%;
+        margin-left: auto;
+    }
+
+    .TextContainer > div:nth-child(2){
+        font-size: 2em;
+    }
+    
+    .TextContainer > div:nth-child(3){
+        width: 60%;
+    }
+    
+    .TextContainer > div:nth-child(3) >img{
+        display: block;
+    }
+
+    .TextContainer > div:nth-child(4){
+        width: 35%;
+        font-size: 1.2em;
+    }
+    
+    .TextContainer > div:nth-child(4) > input{
+        width: 100%;
+        font-size: 0.35em;
+    }
+
+    .TextContainer > div:nth-child(4) > button{
+        width: 60%;
+        font-size: 0.4em;
+        font-weight: 500;
+    }
+    
+    footer{
+        /* border: 2px red solid; */
+        font-size: 1em;
+        margin-top: 30px;
+        padding:100px 10px 0px 10px ;
+    }   
+}
+
+
+
+
+
+
