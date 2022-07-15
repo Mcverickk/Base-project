@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 import React,{useEffect} from 'react'
 import Navbar from '../Navbar/Navbar'
 import SideBar from '../Sidebar/SideBar'
-import '../Swap/styles.css'
+import './styles.css'
 import { DataTags } from '../Swap/SwapData'
 import { DataTags2 } from '../Swap/SwapData'
 
@@ -26,15 +26,16 @@ function Liquidity() {
           <div data-aos="zoom-in" className='AddressContainer'>Address</div>
           <div className='FormContainer'>
             <div className='EllipseOne'></div>
-            <h1 data-aos="fade-right">Swap</h1>
+            <h1 data-aos="fade-right">ADD LIQUIDITY</h1>
             <form data-aos="fade-left">
               <input></input>
               <input></input>
-              <input type='submit' value="CONFIRM SWAP"></input>
+              <input type='submit' value="APPROVE PAIR"></input>
+              <input type='submit' value="ADD TO LP POOL"></input>
             </form>
             <div className='EllipseTwo'></div>
 
-            <div className='Data'>
+            {/* <div className='Data'>
               <div data-aos="fade-down" data-aos-delay="500" className='DataValues1'>
                 { DataTags.map((item,index) => {
                   return (
@@ -49,7 +50,7 @@ function Liquidity() {
                   )
                 })}
               </div>
-            </div>
+            </div> */}
         </div>
       
       </div>

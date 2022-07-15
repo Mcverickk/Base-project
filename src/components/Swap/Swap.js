@@ -6,7 +6,10 @@ import SideBar from '../Sidebar/SideBar'
 import './styles.css'
 import { DataTags } from './SwapData'
 import { DataTags2 } from './SwapData'
-
+import { HiOutlineCog } from 'react-icons/hi'
+import { IoIosArrowDown } from 'react-icons/io'
+import Cube from './cube.png'
+import Eth from './eth.png'
 
 function Swap() {
 
@@ -15,7 +18,7 @@ function Swap() {
   })},[])
 
   return ( 
-      <>
+      <div style={{overflow:'hidden'}}>
       <div className='Navbar'><Navbar /></div>
       <div className="MainContainer">
         <div className='Sidebar'>
@@ -26,10 +29,30 @@ function Swap() {
           <div data-aos="zoom-in" className='AddressContainer'>Address</div>
           <div className='FormContainer'>
             <div className='EllipseOne'></div>
-            <h1 data-aos="fade-right">Swap</h1>
+            <h1 data-aos="fade-right">Swap<HiOutlineCog size={26} /></h1>
             <form data-aos="fade-left">
-              <input></input>
-              <input></input>
+              <div>
+                <input style={{color:'#fff',border:'none',backgroundColor:'transparent'}} value="0.0 Max" />
+                <div style={{color:'#fff',border:'0px red solid',backgroundColor:'transparent'}}>
+                  <select className="select" style={{}}>
+                    <option className="option" value="CUBE" >CUBE</option>
+                    <option className="option" value="ETH">ETH</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <IoIosArrowDown color="#fff" size={24} />
+              </div>
+              <div>
+                <input style={{color:'#fff',border:'none',backgroundColor:'transparent'}} value="0.0 Max"/>
+                <div style={{color:'#fff',border:'0px red solid',backgroundColor:'transparent'}}>
+                  <select className="select">
+                    <option className="option" value="CUBE" >CUBE</option>
+                    <option className="option" value="ETH">ETH</option>
+                  </select>
+                </div>
+              </div>
+              
               <input type='submit' value="CONFIRM SWAP"></input>
             </form>
             <div className='EllipseTwo'></div>
@@ -55,7 +78,7 @@ function Swap() {
       </div>
       
     </div>
-    </>
+    </div>
   )
 }
 

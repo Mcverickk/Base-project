@@ -31,7 +31,6 @@
     float: none;
     margin: 1% auto;
     width: 40%;
-    /* border: 2px red solid; */
 }
 
 .FormContainer h1{
@@ -40,9 +39,6 @@
     font-family: 'Poppins';
     font-style: normal;
     color: #fff;
-    /* border: 2px red solid; */
-    display: flex;
-    justify-content: space-between;
 }
 
 .FormContainer form{
@@ -56,68 +52,18 @@
     border-radius: 18px;
 }
 
-form div{
-    padding:10px;
+form input{
+    padding:15px;
     background: #323232;
     border: 1px solid #4B4B4B;
     border-radius: 16px;
     margin-bottom: 6px;
-    display: flex;
-    justify-content: space-between;
-}
-
-form div:nth-of-type(2){
-    padding: 8px;
-    background: #323232;
-    border: 5px solid #171717;
-    margin: -30px auto -30px auto;
-    border-radius: 100%;
-}
-
-.select {
-    color:#fff;
-    border:none;
-    background-color:transparent;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.75px;
-    color: #FFFFFF;
-    padding: 10px;
-}
-
-.option{
-    background-color: #02181C;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 24px;
-    display: flex;
-    letter-spacing: 0.75px;
-    color: #FFFFFF;
-    border: none;
-}
-
-
-form div:nth-of-type(3){
-    padding:10px;
-    background: #323232;
-    border: 1px solid #4B4B4B;
-    border-radius: 16px;
-    margin-bottom: 6px;
-    margin-top: 8px;
-    z-index: -1;
 }
 
 form input[type="submit"]{
     background: linear-gradient(269.56deg, #CEF287 14.68%, #0EE9E8 90.69%);
     border-radius: 16px;
-    padding:20px;
+    padding:15px;
     text-transform: uppercase;
     font-family: 'Poppins';
     font-style: normal;

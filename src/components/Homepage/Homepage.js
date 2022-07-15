@@ -20,7 +20,7 @@ function Homepage() {
       })},[])
 
 
-  const [isActive,setActive] = useState(false)
+  const [isActive,setActive] = useState(true)
     setTimeout(() => {
             setActive(!isActive)
     }, 10000000000);
@@ -50,8 +50,9 @@ function Homepage() {
         </nav>
         
         <div className='TextContainer'>
-            
-            <div className='blu1'>
+            {/* <div> */}
+            <div className='blur1'>dsds</div>
+            <div>
                 <motion.img src={Rect1} alt=".." 
                     animate={{rotate:180,scale:1.5}}
                     transition={{duration:0.75,repeat:Infinity}}
@@ -61,6 +62,8 @@ function Homepage() {
                     transition={{duration:0.75,repeat:Infinity}}
                  />
             </div>
+            {/* </div> */}
+
             
             <div data-aos="fade-down" data-aos-duration='2000'>Coming Soon.</div>
             
@@ -72,14 +75,14 @@ function Homepage() {
             <div>
                 <input type="email" placeholder='Enter your e-mail address'></input>
                 <motion.button whileHover={{
-                    //   y:[5,-5,5,-5],
                       rotate:[0,10,-10,10,-10,10,-10,0],
                     }}>Get Notified</motion.button>
             </div>
             
-            <div>No worries,we don't spam ;</div>
+            <div>No worries,we don't spam ; {")"}</div>
             
-            <div><div className='blur2' />
+            <div>
+                <div className='blur2'>dsdsdsd</div>
                 <motion.img src={Rect4} alt=".."
                     animate={{rotate:-45}}
                     transition={{duration:1,repeat:Infinity}}
@@ -88,9 +91,7 @@ function Homepage() {
         
         </div>
         
-        <footer 
-            // data-aos="fade-down"
-        >
+        <footer>
             All right reserved 2022 - Base protocol - <a href="/"><u>Privacy</u></a>
         </footer>
     
