@@ -8,6 +8,7 @@ import { SupportData } from './SupportData';
 import './styles.css'
 
 
+
 function SideBar() {
 
   
@@ -25,7 +26,7 @@ function SideBar() {
   return (
     <div className='SidebarContainer'>
         
-        <div className='logo'></div>
+        <NavLink to='/'><div className='logo'></div></NavLink>
         
         <div className='navlinks'>
         { SideBarData.map((item, index) => {

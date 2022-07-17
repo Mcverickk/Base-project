@@ -4,6 +4,7 @@ import React,{useEffect} from 'react'
 import Navbar from '../Navbar/Navbar'
 import SideBar from '../Sidebar/SideBar'
 import './styles.css'
+import { NavLink } from 'react-router-dom'
 import { DataTags } from './SwapData'
 import { DataTags2 } from './SwapData'
 import { HiOutlineCog } from 'react-icons/hi'
@@ -29,7 +30,7 @@ function Swap() {
           <div data-aos="zoom-in" className='AddressContainer'>Address</div>
           <div className='FormContainer'>
             <div className='EllipseOne'></div>
-            <h1 data-aos="fade-right">Swap<HiOutlineCog size={26} /></h1>
+            <h1 data-aos="fade-right">Swap<NavLink to='/settings'><HiOutlineCog size={26} /></NavLink></h1>
             
             <form data-aos="fade-left">
               <div>
