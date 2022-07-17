@@ -9,7 +9,6 @@
  .LiquidityContainer{
      background-image: linear-gradient(#02181C, #02181C);
      height: auto;
-     min-height: 100vh;
      padding: 50px;
  }
  

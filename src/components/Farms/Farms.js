@@ -106,9 +106,9 @@ const Farms = () => {
             </div>
 
             <div className='Grid'>
-              <div><GridItem head="Stake" title="12.43 CUBE/ETH LP" input="APPROVE" delay="200" /></div>
-              <div><GridItem head="Unstake" title="12.43 CUBE/ETH LP" input="UNSTAKE" delay="500" /></div>
-              <div><GridItem head="Rewards" title="12213 $CUBE" input="HARVEST" delay="900" /></div>
+              <div><GridItem head="Stake" title="12.43 CUBE/ETH LP" input="APPROVE" delay="100" /></div>
+              <div><GridItem head="Unstake" title="12.43 CUBE/ETH LP" input="UNSTAKE" delay="400" /></div>
+              <div><GridItem head="Rewards" title="12213 $CUBE" input="HARVEST" delay="700" /></div>
             </div>
 
             <div className="TableDesktop">
