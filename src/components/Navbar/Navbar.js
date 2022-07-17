@@ -5,9 +5,6 @@ import './styles.css'
 
 function Navbar() {
 const [isOpen, setOpen] = useState(false)
-// { isOpen ? <></>
-
-// }
 
   return (
     <div className='NavbarContainer'>

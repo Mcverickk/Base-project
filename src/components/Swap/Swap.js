@@ -30,9 +30,10 @@ function Swap() {
           <div className='FormContainer'>
             <div className='EllipseOne'></div>
             <h1 data-aos="fade-right">Swap<HiOutlineCog size={26} /></h1>
+            
             <form data-aos="fade-left">
               <div>
-                <input style={{color:'#fff',border:'none',backgroundColor:'transparent'}} value="0.0 Max" />
+                <input className='inputMax' value="0.0 Max" />
                 <div style={{color:'#fff',border:'0px red solid',backgroundColor:'transparent'}}>
                   <select className="select" style={{}}>
                     <option className="option" value="CUBE" >CUBE</option>
@@ -44,7 +45,7 @@ function Swap() {
                 <IoIosArrowDown color="#fff" size={24} />
               </div>
               <div>
-                <input style={{color:'#fff',border:'none',backgroundColor:'transparent'}} value="0.0 Max"/>
+                <input className='inputMax' value="0.0 Max"/>
                 <div style={{color:'#fff',border:'0px red solid',backgroundColor:'transparent'}}>
                   <select className="select">
                     <option className="option" value="CUBE" >CUBE</option>
@@ -52,9 +53,9 @@ function Swap() {
                   </select>
                 </div>
               </div>
-              
               <input type='submit' value="CONFIRM SWAP"></input>
             </form>
+            
             <div className='EllipseTwo'></div>
 
             <div className='Data'>

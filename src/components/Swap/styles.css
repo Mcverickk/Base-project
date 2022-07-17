@@ -8,7 +8,8 @@
 
 .SwapContainer{
     background-image: linear-gradient(#02181C, #02181C);
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     padding: 30px;
 }
 
@@ -30,103 +31,8 @@
 .FormContainer{ 
     float: none;
     margin: 1% auto;
-    width: 40%;
+    width: 36%;
     /* border: 2px red solid; */
-}
-
-.FormContainer h1{
-    text-transform: uppercase;
-    font-weight: 900;
-    font-family: 'Poppins';
-    font-style: normal;
-    color: #fff;
-    /* border: 2px red solid; */
-    display: flex;
-    justify-content: space-between;
-}
-
-.FormContainer form{
-    position: relative;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    margin-top:22px;
-    background: #171717;
-    box-shadow: 0px 1px 2px rgba(120, 120, 120, 0.3), 0px 0px 3px rgba(167, 167, 167, 0.35);
-    border-radius: 18px;
-}
-
-form div{
-    padding:10px;
-    background: #323232;
-    border: 1px solid #4B4B4B;
-    border-radius: 16px;
-    margin-bottom: 6px;
-    display: flex;
-    justify-content: space-between;
-}
-
-form div:nth-of-type(2){
-    padding: 8px;
-    background: #323232;
-    border: 5px solid #171717;
-    margin: -30px auto -30px auto;
-    border-radius: 100%;
-}
-
-.select {
-    color:#fff;
-    border:none;
-    background-color:transparent;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.75px;
-    color: #FFFFFF;
-    padding: 10px;
-}
-
-.option{
-    background-color: #02181C;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 24px;
-    display: flex;
-    letter-spacing: 0.75px;
-    color: #FFFFFF;
-    border: none;
-}
-
-
-form div:nth-of-type(3){
-    padding:10px;
-    background: #323232;
-    border: 1px solid #4B4B4B;
-    border-radius: 16px;
-    margin-bottom: 6px;
-    margin-top: 8px;
-    z-index: -1;
-}
-
-form input[type="submit"]{
-    background: linear-gradient(269.56deg, #CEF287 14.68%, #0EE9E8 90.69%);
-    border-radius: 16px;
-    padding:20px;
-    text-transform: uppercase;
-    font-family: 'Poppins';
-    font-style: normal;
-    margin-top: 18px;
-    font-weight: 600;
-    font-size: 0.8em;
-    align-items: center;
-    letter-spacing: 0.75px;
-    color: #000000;
 }
 
 .EllipseOne{
@@ -137,6 +43,101 @@ form input[type="submit"]{
     margin-left: 50px;
     background: #157D7F;
     filter: blur(70px);
+}
+
+.FormContainer h1{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: 'Poppins';
+    font-style: normal;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px red solid; */
+}
+
+.FormContainer form{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top:2em;
+    background: #171717;
+    box-shadow: 0px 1px 2px rgba(120, 120, 120, 0.3), 0px 0px 3px rgba(167, 167, 167, 0.35);
+    border-radius: 18px;
+}
+
+form div:nth-of-type(2n-1){
+    padding:5px 10px 5px 10px;
+    background: #323232;
+    border: 1px solid #4B4B4B;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px red solid; */
+}
+
+form > div >input{
+    color:#fff;
+    background-color:transparent;
+    border:none;
+    outline: none;
+    /* border: 2px red solid; */
+}
+
+form div:nth-of-type(2){
+    padding: 8px;
+    background: #323232;
+    border: 5px solid #171717;
+    margin: -30px auto -30px auto;
+    border-radius: 100%;
+}
+
+form div:nth-of-type(3){
+    z-index: -1;
+}
+
+.select {
+    color:#fff;
+    border:none;
+    background-color:transparent;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    padding: 0.3em;
+    /* border: 2px red solid; */
+
+}
+
+.option{
+    background-color: #02181C;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1em;
+    display: flex;
+    color: #FFFFFF;
+    border: none;
+}
+
+
+form input[type="submit"]{
+    background: linear-gradient(269.56deg, #CEF287 14.68%, #0EE9E8 90.69%);
+    border-radius: 16px;
+    padding:18px;
+    text-transform: uppercase;
+    font-family: 'Poppins';
+    font-style: normal;
+    margin-top: 0.5em;
+    font-weight: 600;
+    font-size: 0.8em;
+    align-items: center;
+    letter-spacing: 0.75px;
+    color: #000000;
 }
 
 .EllipseTwo{
@@ -151,11 +152,13 @@ form input[type="submit"]{
 }
 
 .Data{
-    margin-top: 40px;
+    margin-top: 1.2em;
     display: grid;
-    padding-left: 20px;
+    padding: 10px;
     grid-template-columns: auto auto;
     font-size: 2em;
+    /* border: 2px red solid; */
+
 }
 
 .DataValues1{
@@ -166,6 +169,7 @@ form input[type="submit"]{
     flex-direction: column;
     color: #FFFFFF;
     font-size: 0.4em;
+    text-align:left ;
 }
 
 .DataValues2{
@@ -176,6 +180,7 @@ form input[type="submit"]{
     flex-direction: column;
     color: #FFFFFF;
     font-size: 0.4em;
+    text-align:right;
 }
 
 .dataValues{
@@ -183,134 +188,22 @@ form input[type="submit"]{
 }
 
 
-@media screen and (min-width:320px) and (max-width:760px){
+
+@media screen and (min-width:320px){ 
     .MainContainer{
-        display: grid;
         grid-template-columns: auto;
+    }
+    
+    .AddressContainer{
+        display:none;
+    }
+
+    .Sidebar{
+        display: none;
     }
 
     .SwapContainer{
-        background-image: linear-gradient(#02181C, #02181C);
-        height: 100vh;
-        padding: 30px;
-    }
-    
-    .AddressContainer{
-        width: 15%;
-        margin: auto 10px auto auto;
-        padding: 10px;
-        color: #fff;
-        border: 2px solid rgba(213, 213, 213, 0.2);
-        border-radius: 18px;
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 500;
-        text-align: center;
-        overflow: hidden;
-    }
-    
-    .FormContainer{ 
-        float: none;
-        margin: 1% auto;
-        width: 40%;
-    }
-    
-    .FormContainer h1{
-        text-transform: uppercase;
-        font-weight: 900;
-        font-family: 'Poppins';
-        font-style: normal;
-        color: #fff;
-    }
-    
-    .FormContainer form{
-        position: relative;
         padding: 20px;
-        display: flex;
-        flex-direction: column;
-        margin-top:22px;
-        background: #171717;
-        box-shadow: 0px 1px 2px rgba(120, 120, 120, 0.3), 0px 0px 3px rgba(167, 167, 167, 0.35);
-        border-radius: 18px;
-    }
-    
-    form input{
-        padding:20px;
-        background: #323232;
-        border: 1px solid #4B4B4B;
-        border-radius: 16px;
-        margin-bottom: 6px;
-    }
-    
-    form input[type="submit"]{
-        background: linear-gradient(269.56deg, #CEF287 14.68%, #0EE9E8 90.69%);
-        border-radius: 16px;
-        padding:20px;
-        text-transform: uppercase;
-        font-family: 'Poppins';
-        font-style: normal;
-        margin-top: 18px;
-        font-weight: 600;
-        align-items: center;
-        letter-spacing: 0.75px;
-        color: #000000;
-    }
-    
-    .EllipseOne{
-        position: absolute;
-        width: 30%;
-        height: 10%;
-        z-index: -  1;
-        margin-left: 50px;
-        background: #157D7F;
-        filter: blur(70px);
-    }
-    
-    .EllipseTwo{
-        position: absolute;
-        width: 30%;
-        height: 8%;
-        z-index: -  1;
-        margin-left: 50px;
-        background: #CEF287;
-        opacity: 0.5;
-        filter: blur(80px);
-    }
-    
-    .Data{
-        margin-top: 50px;
-        display: grid;
-        padding-left: 20px;
-        grid-template-columns: auto auto;
-    }
-    
-    .DataValues1{
-        font-family:'Open Sans';
-        font-style: normal;
-        font-weight: 400;
-        display: flex;
-        flex-direction: column;
-        color: #FFFFFF;
-    }
-    
-    .DataValues2{
-        font-family:'Open Sans';
-        font-style: normal;
-        font-weight: 400;
-        display: flex;
-        flex-direction: column;
-        color: #FFFFFF;
-    }
-    
-    .dataValues{
-        margin-bottom: 19px;
-    }
-}
-
-
-@media screen and (min-width:320px){ 
-    .AddressContainer{
-        display:none;
     }
 
     .FormContainer{ 
@@ -318,25 +211,46 @@ form input[type="submit"]{
     }
 
     .FormContainer form{
+        padding: 15px;
+    }
+
+    form div:nth-of-type(2n-1){
+        padding: 2px;
+    }
+
+    form > div >input{
         padding: 10px;
     }
 
     form input[type="submit"]{
-        margin-top: 8px;
-        font-size: 0.6em;
+        margin-top: 0.2em;
+        font-size: 0.8em;
     }
 
     .Data{
-        margin-top: 30px;
+        margin-top: 1em;
         font-size: 1.6em;
     }
+
+    .inputMax{
+        font-size: 0.8em;
+    }
+
+    .option{
+        font-size: 1em;
+    }
+
+    .select{
+        font-size: 0.8em;
+        padding-top: 10px;
+    }
 }
+
 
 @media screen and (min-width:425px){ 
 
     form input[type="submit"]{
-        margin-top: 8px;
-        font-size: 0.7em;
+        font-size: 0.9em;
     }
 
     .Data{
@@ -351,8 +265,11 @@ form input[type="submit"]{
 @media screen and (min-width:550px){ 
 
     form input[type="submit"]{
-        margin-top: 8px;
         font-size: 0.8em;
+    }
+
+    .FormContainer{
+        width: 90%;
     }
 
     .SwapContainer{
@@ -365,85 +282,90 @@ form input[type="submit"]{
 }
 
 @media screen and (min-width:768px){ 
-    .FormContainer{
-        width: 80%;
-    }
-    
-    form input[type="submit"]{
-        margin-top: 8px;
-        font-size: 0.8em;
+    .MainContainer{
+        grid-template-columns: 20% 80%;
     }
 
+    .AddressContainer{
+        display: block;
+        width: 20%;
+    }
+
+    .Sidebar{
+        display: block;
+    }
+
+    .FormContainer{
+        width: 80%;
+        margin-top: 2.5em;
+    }
+    
     .SwapContainer{
         padding: 42px 50px;
     }
 
     .Data{
         font-size: 1.8em;
-        margin-top: 40px;
+        margin-top: 1em;
     }
 }
 
 @media screen and (min-width:1000px){ 
-    .AddressContainer{
-        display: block;
-    }
-    
     .FormContainer{
-        width: 70%;
+        width: 65%;
     }
     
     form input[type="submit"]{
-        margin-top: 8px;
         font-size: 0.85em;
-    }
-
-    .SwapContainer{
-        padding: 42px 50px;
     }
 
     .Data{
         font-size: 1.9em;
-        margin-top: 40px;
     }
 }
 
 @media screen and (min-width:1400px){ 
     .FormContainer{
-        width: 60%;
+        width: 45%;
+    }
+
+    form{
+        padding: 20px;
+    }
+    
+    .inputMax{
+        font-size: 1em;
     }
     
     form input[type="submit"]{
-        margin-top: 8px;
         font-size: 0.9em;
     }
 
-    .SwapContainer{
-        padding: 42px 50px;
-    }
-
     .Data{
-        font-size: 1.95em;
-        margin-top: 40px;
+        font-size: 2em;
     }
 }
 
 @media screen and (min-width:1500px){ 
-    .FormContainer{
-        width: 50%;
-    }
     
     form input[type="submit"]{
         margin-top: 8px;
         font-size: 1em;
     }
 
-    .SwapContainer{
-        padding: 42px 50px;
+    .Data{
+        font-size: 2.1em;
     }
 
-    .Data{
-        font-size: 2em;
-        margin-top: 40px;
+    .inputMax{
+        font-size: 1.1em;
+    }
+
+    .option{
+        font-size: 1em;
+    }
+
+    .select{
+        font-size: 1em;
     }
 }

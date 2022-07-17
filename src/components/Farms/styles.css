@@ -1,11 +1,472 @@
-.MainContainer{
-    /* display: grid;
-    grid-template-columns: 20% 80%; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');  
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.MainContainer2{
+    display: grid;
+    grid-template-columns: 20% 80%;
 }
 
-.ChartsContainer{
+.FarmContainer{
     background-image: linear-gradient(#02181C, #02181C);
-    height: 100vh;
+    height: auto;
     padding: 30px;
 }
 
+.Sidebar{
+    height: 100%;
+}
+
+.FarmContainer > div:nth-of-type(2){
+    background: #FFCF87;
+    filter: blur(80px);
+    width: 60%;
+    margin: auto;
+}
+
+.FarmContainer > div:nth-of-type(3) {
+    width: 60%;
+    margin: 3% auto;
+    display: flex;
+}
+
+.FarmContainer > div:nth-of-type(3) > h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+    color: #FFFFFF;
+}
+
+.FarmContainer > div:nth-of-type(3) > div > input{
+    background-color: transparent;
+    margin-left: 20px;
+}
+
+.FarmContainer > div:nth-of-type(3) > div > label{
+    background-color: transparent;
+    margin-left: 10px;
+    /* color:rgba(255,255,255,0.5); */
+    color: #FFFFFF;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    padding-top: 4px;
+    font-size: 0.9em;
+}
+
+.FarmContainer > div:nth-of-type(4){
+    width:60%;
+    margin:4em auto
+}
+
+.TopTableMobile{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.TableHead{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    padding: 10px;
+    margin: 4em auto;
+    width: 18%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.TableData{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    color: #FFFFFF;
+    width: 18%;
+    /* text-align: center; */
+    padding: 20px;
+    border-top:1px solid rgba(183, 183, 183, 0.2);   
+}
+
+.Grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background: rgba(217, 217, 217,0.1);
+    border-radius: 22px;
+    width: 100%;
+    margin: auto;
+}
+
+.GridItem{
+    display:grid;
+    grid-template-columns:10% 90%;
+    padding:20px
+}
+
+.GridContentsContainer{
+    display:flex;
+    flex-direction:column
+}
+
+.GridHead{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #FFFFFF;
+    opacity: 0.5;
+    letter-spacing: 0.05em;
+    width:80%;
+    margin: auto;
+}
+
+.GridTitle{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.8em;
+    color: #FFFFFF;
+    width: 80%;
+    margin: 0.6em auto;
+}
+
+.GridInput{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.75px;
+    color: #fff;
+    width: 100%;
+    margin: 0.8em;
+    padding: 5px;
+    background-origin: border-box;
+    background-clip: content-box,border-box;
+    border-top: 3px solid #CEF287;
+    border-left: 3px solid #CEF287;
+    border-bottom: 3px solid #0EE9E8;
+    border-right: 3px solid #0EE9E8;
+    border-image-slice: 2;
+    border-radius: 16px;
+}
+
+.GridInput:hover{
+    color: #000000;
+    font-weight: 500;
+    background: linear-gradient(269.56deg, #CEF287 14.68%, #0EE9E8 90.69%);
+}
+
+.TableDesktop{
+    margin:30px auto;
+    width:95%
+}
+
+.TableDataMobile{
+    margin:30px auto;
+    width:95%;
+    display: grid;
+    /* justify-content: space-between; */
+}
+
+.TableData{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    color: #FFFFFF;
+    width: 18%;
+    /* text-align: center; */
+    font-size: 0.7em;
+    padding: 20px;
+    border-top:1px solid rgba(183, 183, 183, 0.2)   
+}
+
+.bold{
+    background: linear-gradient(180deg, #CEF287 0%, #0EE9E8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+}
+
+
+@media screen and (min-width:320px) {
+    .MainContainer2{
+        grid-template-columns: auto;
+    }
+
+    .FarmContainer{
+        padding: 20px;
+    }
+
+    .FarmContainer > div:nth-of-type(2){
+        filter: blur(40px);
+        width: 80%;
+    }
+    
+    .FarmContainer > div:nth-of-type(3){
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .FarmContainer > div:nth-of-type(3) > div > input {
+        margin-left: 0px;
+    }
+    
+    .FarmContainer > div:nth-of-type(4){
+        width: 100%;
+        margin-top: 2em;
+    }
+
+    .TopTableDesktop{
+        display: none;
+    }
+
+    .TopTableMobile{
+        width:100%;
+        margin: auto;
+    }
+
+    .TableHead{
+        margin: 0px;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+        font-size: 0.8em;
+    }
+
+    .TopTableMobile > div:nth-of-type(3){
+        text-align: right;
+    }
+
+    .TableData{
+        padding: 10px;
+        width: 100%;
+        border: none;
+        font-size: 0.8em;
+    }
+
+    .TableDataMobile > div:nth-of-type(2n)
+    {
+        text-align: right;
+        border-left: 2px solid rgba(183, 183, 183, 0.2);
+        border-bottom: 4px solid rgba(183, 183, 183, 0.2);
+    }
+    
+    .TableDataMobile > div:nth-of-type(2n-1)
+    {
+        text-align: left;
+        border-right: 2px solid rgba(183, 183, 183, 0.2);
+        border-bottom: 4px solid rgba(183, 183, 183, 0.2);
+    }
+
+    .Grid{
+        grid-template-columns: auto;
+        padding: 10px 0px;
+        margin-top: 15px;
+    }
+    
+    .GridItem{
+        grid-template-columns: auto;
+        padding:10px 0px;
+        margin-top: 5px;
+    }
+    
+    .GridImg{
+        display: none;
+    }
+
+    .GridHead{
+        font-size: 1.1em;
+        width: 100%;
+        text-align: center;
+    }
+
+    .GridTitle{
+        font-size: 0.7em;
+        width: 100%;
+        text-align: center;
+    }
+
+    .GridInput{
+        padding: 2px;
+        width:60%;
+        margin: auto;
+    }
+
+    .TableDesktop{
+        display: none;
+    }
+
+    .TableDataMobile{
+        grid-template-columns: auto auto;
+        width: 80%;
+    }     
+
+    .TableData:nth-of-type(6n){
+        margin-bottom:10px;
+    }
+}
+
+
+@media screen and (min-width:768px) { 
+    .MainContainer2{
+        grid-template-columns: 20% 80%;
+    }
+    
+    .FarmContainer > div:nth-of-type(3) {
+        width: 80%;
+        flex-direction: row;
+        justify-content: space-between;
+    } 
+        
+    .FarmContainer > div:nth-of-type(4){
+        width:90%;
+        margin:2.5em auto;
+    }
+    
+    .TopTableDesktop{
+        display: block;
+    }
+
+    .TopTableMobile{
+        display: none;
+    }
+    
+    .TableHead{
+        margin: 4em auto;
+        width: 18%;
+        font-size: 0.85em;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .TableData{
+        width: 18%;
+        font-size:0.8em;
+        padding: 20px;
+        border-top:1px solid rgba(183, 183, 183, 0.2)   
+    }
+
+    .Grid{
+        width: 90%;
+    }
+    
+    .TableDesktop{
+        margin:30px auto;
+        width:95%;
+        display: block;
+    }
+    
+    .TableDataMobile{
+        display: none;
+    }   
+}
+
+
+@media screen and (min-width:1024px) {
+    .FarmContainer{
+        padding: 30px;
+    }
+    
+    .FarmContainer > div:nth-of-type(2){
+        filter: blur(60px);
+    }
+    
+    .FarmContainer > div:nth-of-type(3) {
+        width: 60%;
+    }
+      
+    .FarmContainer > div:nth-of-type(4){
+        width:80%;
+        margin:4em auto
+    }
+    
+    .TopTableMobile{
+        display: none;
+    }
+    
+    .TableHead{
+        text-align: left;
+    }
+    
+    .TableData{
+        font-size: 1em;
+        width: 20%;
+        text-align: left;
+        padding: 10px;
+    }
+    
+    .Grid{
+        grid-template-columns: auto auto auto;
+        width: 100%;
+    }
+    
+    .GridItem{
+        grid-template-columns:10% 90%;
+        padding:10px;
+    }
+    
+    .GridImg{
+        display: block;
+    }
+    
+    .GridHead{
+        width:80%;
+        text-align: left;
+    }
+    
+    .GridTitle{
+        font-size: 0.75em;
+        width: 80%;
+        text-align: left;
+        margin: 0.6em auto;
+    }
+    
+    .GridInput{
+        width: 80%;
+        margin: 0.8em;
+        padding: 5px;
+    } 
+}
+
+
+@media screen and (min-width:1440px) {
+
+    .FarmContainer > div:nth-of-type(2){
+        filter: blur(70px);
+        width: 80%;
+    }
+    
+    .FarmContainer > div:nth-of-type(4){
+        width:60%;
+    }
+    
+    .TableHead{
+        text-align: center;
+        font-size: 1.1em;
+    }
+    
+    .TableData{
+        font-size: 1.1em; 
+        text-align: center;
+        width: 19%;
+        padding: 18px;
+    }
+     
+    .GridItem{
+        padding:20px
+    }
+    
+    .GridHead{
+        font-size: 1.2em;
+    }
+    
+    .GridTitle{
+        font-size: 0.8em;
+    }
+    
+    .TableDesktop{
+        margin:30px auto;
+        width:95%
+    }
+}

@@ -4,7 +4,7 @@
     background-color: #000505;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height:100%;
     font-family: 'Poppins';
     font-style: normal;
 }
@@ -46,11 +46,11 @@
     margin-bottom: 20px;
 }
 
-@media screen and (min-width:320px) and (max-width:767px){
+/* @media screen and (min-width:320px) and (max-width:767px){
     .SidebarContainer{
         display: none;
     }
-}
+} */
 
 @media screen and (min-width:768px){
     .navlinks{

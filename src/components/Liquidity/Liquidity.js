@@ -6,58 +6,108 @@ import SideBar from '../Sidebar/SideBar'
 import './styles.css'
 import { DataTags } from '../Swap/SwapData'
 import { DataTags2 } from '../Swap/SwapData'
+import { HiOutlineCog } from 'react-icons/hi'
+import { HiOutlinePlus } from 'react-icons/hi'
 
 
-function Liquidity() {
+const TableHead = ({ column1, column2, column3, column4, classNameHead }) => (
+  <table>
+    <tr>
+      <td className={classNameHead}>{column1}</td>
+      <td className={classNameHead}>{column2}</td>
+      <td className={classNameHead}>{column3}</td>
+      <td className={classNameHead}>{column4}</td>
+    </tr>
+  </table>
+)
+
+const TableData = ({ column1, column2, column3, column4, classNameData }) => (
+  <table>
+    <tr>
+      <td className={classNameData}>{column1}</td>
+      <td className={classNameData}>{column2}</td>
+      <td className={classNameData}>{column3}</td>
+      <td className={classNameData}>{column4}</td>
+    </tr>
+  </table>
+)
+
+
+const Liquidity = () => {
 
   useEffect(()=>{Aos.init({
     duration:1000
   })},[])
 
   return ( 
-      <>
-      <div className='Navbar'><Navbar /></div>
-      <div className="MainContainer">
-        <div className='Sidebar'>
-          <SideBar />
-        </div>
-      
-        <div className='SwapContainer'>
-          <div data-aos="zoom-in" className='AddressContainer'>Address</div>
-          <div className='FormContainer'>
-            <div className='EllipseOne'></div>
-            <h1 data-aos="fade-right">ADD LIQUIDITY</h1>
-            <form data-aos="fade-left">
-              <input></input>
-              <input></input>
-              <input type='submit' value="APPROVE PAIR"></input>
-              <input type='submit' value="ADD TO LP POOL"></input>
-            </form>
-            <div className='EllipseTwo'></div>
+      <div>
+        <div className='Navbar'><Navbar /></div>
+        
+        <div className="MainContainer3">  
+          <div className='Sidebar2'>
+            <SideBar />
+          </div>
+          <div className='LiquidityContainer'>
+            <div data-aos="zoom-in" className='AddressContainer'>Address</div>
+            <div className='FormContainer'>
+              <div className='EllipseOne'></div>
+              <h1 data-aos="fade-right">add liquidity<HiOutlineCog size={26} /></h1>
+              <form data-aos="fade-left">
+                <div>
+                  <input className='inputMax' value="0.0 Max" />
+                  <div style={{color:'#fff',border:'0px red solid',backgroundColor:'transparent'}}>
+                    <select className="select" style={{}}>
+                      <option className="option" value="CUBE" >CUBE</option>
+                      <option className="option" value="ETH">ETH</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <HiOutlinePlus color="#fff" size={24} />
+                </div>
+                <div>
+                  <input className='inputMax' value="0.0 Max"/>
+                  <div style={{color:'#fff',border:'0px red solid',backgroundColor:'transparent'}}>
+                    <select className="select">
+                      <option className="option" value="CUBE" >CUBE</option>
+                      <option className="option" value="ETH">ETH</option>
+                    </select>
+                  </div>
+                </div>
+                <input type='submit' value="APPROVE PAIR"></input>
+                <input type='submit' value="APPROVE TO LP POOL"></input>
+              </form>
+            
+              <div className='EllipseTwo'></div>
+            </div>
 
-            {/* <div className='Data'>
-              <div data-aos="fade-down" data-aos-delay="500" className='DataValues1'>
-                { DataTags.map((item,index) => {
-                  return (
-                    <span className="dataValues" key={index}>{item.title}</span>
-                  )
-                })}
+            <div className='DataTable'>
+              <div>
+                <div style={{display:'flex',justifyContent:'space-between'}}><span className='LeftData'>Pool Rate</span><span className="RightData" style={{textAlign:'right'}}>1 CUBE = 0.459825cuETH</span></div>
+                <div style={{display:'flex',justifyContent:'space-between'}}><span className='LeftData'>Share of Pool</span><span className="RightData" style={{textAlign:'right'}}>0,5%</span></div>
               </div>
-              <div data-aos="fade-up" data-aos-delay="1000" className='DataValues2'>
-                { DataTags2.map((item,index) => {
-                  return (
-                    <span className="dataValues" key={index}>{item.title}</span>
-                  )
-                })}
+              <div className='Details'>
+                By adding liquidity you'll earn 0.25% of all trades on this pair proportional to your share of the pool. Fees are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity.
               </div>
-            </div> */}
-        </div>
+              <h1>Your LP Pools</h1>
+              <div className='TopTableDesktop2'>
+                <div style={{display:'flex',justifyContent:'space-between',flexDirection:'column'}}><TableHead classNameHead="TableHead2" column1="POOL" column2="SHARE" column3="TVL" column4="24H VOLUME"/></div>
+                <div style={{display:'flex',justifyContent:'space-between',flexDirection:'column'}}><TableData classNameData="TableData2" column1="CUBE/ETH" column2="0,5%" column3="1.1M" column4="20M" /></div>
+                <div style={{display:'flex',justifyContent:'space-between',flexDirection:'column'}}><TableData classNameData="TableData2" column1="CUBE/ETH" column2="0,5%" column3="1.1M" column4="20M" /></div>
+                <div style={{display:'flex',justifyContent:'space-between',flexDirection:'column'}}><TableData classNameData="TableData2" column1="CUBE/ETH" column2="0,5%" column3="1.1M" column4="20M" /></div>
+              </div>              
+            </div>
+
+          
+          
+          </div>  { /* LiquidityContainer */ }
       
+        </div>    { /* MainContainer3 */ }
       </div>
-      
-    </div>
-    </>
   )
 }
 
 export default Liquidity
+
+
+
