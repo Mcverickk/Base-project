@@ -34,11 +34,11 @@ function Homepage() {
     >
       <nav>
         <img data-aos="fade-up" src={logo} alt="Base"></img>
-        {/* <div className="Links">
+        <div className="Links">
           {Links.map((item, index) => {
             return (
               <NavLink
-                to={isActive ? `${item.path}` : "/"}
+                to={"/"}
                 style={
                   isActive ? { cursor: "pointer" } : { cursor: "not-allowed" }
                 }
@@ -56,7 +56,7 @@ function Homepage() {
               </NavLink>
             );
           })}
-        </div> */}
+        </div>
         <motion.a
           className="twitter"
           data-aos="fade-down"
