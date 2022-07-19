@@ -39,7 +39,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route
+          {/* <Route
             path="/swap"
             element={
               <Swap
@@ -76,8 +76,8 @@ function App() {
                 providerContract={providerContract}
                 signerContract={signerContract}
               />
-            }
-          />
+            } */}
+          {/* /> */}
         </Routes>
       </Router>
     </div>
