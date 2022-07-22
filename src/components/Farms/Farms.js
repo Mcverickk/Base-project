@@ -164,9 +164,13 @@ const Farms = (props) => {
             <SideBar />
           </div>
           <div className="FarmContainer">
-            <div data-aos="zoom-in" className="AddressContainer">
+            <button 
+              data-aos="zoom-in" 
+              className="AddressContainer"
+              onClick = {''}
+            >
               Address
-            </div>
+            </button>
             <div>dsd</div>
             <div>
               <h1 data-aos="fade-right">ALL FARMS</h1>
