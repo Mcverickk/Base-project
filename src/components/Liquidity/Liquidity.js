@@ -291,12 +291,17 @@ const Liquidity = (props) => {
                   </select>
                 </div>
               </div>
-              <input
+              <button
                 type="submit"
-                value="APPROVE PAIR"
+                // value="APPROVE PAIR"
                 onClick={handleApprove}
-              ></input>
-              <input type="submit" value="APPROVE TO LP POOL"></input>
+              >APPROVE PAIR</button>
+              <button 
+                type="submit" 
+                // value="APPROVE TO LP POOL"
+              >
+                APPROVE TO LP POOL
+              </button>
             </form>
 
             <div className="EllipseTwo"></div>

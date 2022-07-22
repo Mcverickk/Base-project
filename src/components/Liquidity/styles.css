@@ -118,7 +118,7 @@
  }
  
  
- form input[type="submit"]{
+ form button[type="submit"]{
      background: linear-gradient(269.56deg, #CEF287 14.68%, #0EE9E8 90.69%);
      border-radius: 16px;
      padding:18px;
@@ -270,7 +270,7 @@
          padding: 10px;
      }
  
-     form input[type="submit"]{
+     form button[type="submit"]{
          margin-top: 0.2em;
          font-size: 0.8em;
      }
@@ -303,7 +303,7 @@
  
  @media screen and (min-width:425px){ 
  
-     form input[type="submit"]{
+     form button[type="submit"]{
          font-size: 0.9em;
      }
  
@@ -318,7 +318,7 @@
  
  @media screen and (min-width:550px){ 
  
-     form input[type="submit"]{
+     form button[type="submit"]{
          font-size: 0.8em;
      }
  
@@ -372,7 +372,7 @@
          width: 65%;
      }
      
-     form input[type="submit"]{
+     form button[type="submit"]{
          font-size: 0.85em;
      }
  
@@ -397,7 +397,7 @@
          font-size: 1em;
      }
      
-     form input[type="submit"]{
+     form button[type="submit"]{
          font-size: 0.9em;
      }
  
@@ -410,7 +410,7 @@
  
  @media screen and (min-width:1500px){ 
      
-     form input[type="submit"]{
+     form button[type="submit"]{
          margin-top: 8px;
          font-size: 1em;
      }
