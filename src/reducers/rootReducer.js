@@ -1,23 +1,16 @@
 const initState = {
-    isOpen : false
+    isOpen:false
 }
 
-const rootReducer = (state=initState,action) =>{
-    if(action.type==='OPEN'){
+const rootReducer = (state=initState,action) => {
+    if(action.type==='TOGGLE'){
         let newState = !(state.isOpen)
-        return{
+        return {
             ...state,
-            isOpen : newState
+            isOpen:newState
         }
     }
-    
-    if(action.type==='CLOSE'){
-        let newState = !(state.isOpen)
-        return{
-            ...state,
-            isOpen : newState
-        }
-    }
+    return state
 }
 
 export default rootReducer

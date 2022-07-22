@@ -6,6 +6,8 @@ import SideBar from "../Sidebar/SideBar";
 import "./styles.css";
 import num from "./num.png";
 import { ethers } from "ethers";
+import { connect } from 'react-redux'
+import MobileNavbar from "../MobileNavbar/MobileNavbar";
 
 const GridItem = ({ head, title, input, delay }) => (
   <div data-aos="fade-up" data-aos-delay={delay} className="GridItem">
@@ -156,53 +158,31 @@ const Farms = (props) => {
       <div className="Navbar">
         <Navbar />
       </div>
-      <div className="MainContainer2">
-        <div className="Sidebar Sidebar2">
-          <SideBar />
-        </div>
-        <div className="FarmContainer">
-          <div data-aos="zoom-in" className="AddressContainer">
-            Address
+      {
+          props.isOpen ? <div><MobileNavbar /></div>:<><div className="MainContainer2">
+          <div className="Sidebar Sidebar2">
+            <SideBar />
           </div>
-          <div>dsd</div>
-          <div>
-            <h1 data-aos="fade-right">ALL FARMS</h1>
-            <div data-aos="fade-right" data-aos-delay="400">
-              <input type="checkbox" />
-              <label for="">Hide Zero Balance</label>
+          <div className="FarmContainer">
+            <div data-aos="zoom-in" className="AddressContainer">
+              Address
             </div>
-            <div data-aos="fade-right" data-aos-delay="900">
-              <input type="checkbox" />
-              <label for="">Deposited only</label>
+            <div>dsd</div>
+            <div>
+              <h1 data-aos="fade-right">ALL FARMS</h1>
+              <div data-aos="fade-right" data-aos-delay="400">
+                <input type="checkbox" />
+                <label for="">Hide Zero Balance</label>
+              </div>
+              <div data-aos="fade-right" data-aos-delay="900">
+                <input type="checkbox" />
+                <label for="">Deposited only</label>
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="TopTableDesktop">
-              <TableHead
-                headdelay="500"
-                classNameHead="TableHead"
-                column1="POOL"
-                column2="BALANCE"
-                column3="DEPOSITED"
-                column4="TVL"
-                column5="APY"
-                column6="BOOST"
-              />
-              <TableData
-                datadelay="900"
-                classNameData="TableData"
-                column1="CUBE/ETH"
-                column2="12.43"
-                column3="0"
-                column4="1.1M"
-                column5="48.7%"
-                column6="10X"
-              />
-            </div>
-
-            <div className="TopTableMobile">
-              <div>
-                <TableHeadMobile
+            <div>
+              <div className="TopTableDesktop">
+                <TableHead
+                  headdelay="500"
                   classNameHead="TableHead"
                   column1="POOL"
                   column2="BALANCE"
@@ -211,138 +191,7 @@ const Farms = (props) => {
                   column5="APY"
                   column6="BOOST"
                 />
-              </div>
-              <div>
-                <TableDataMobile
-                  classNameData="TableData"
-                  column1="CUBE/ETH"
-                  column2="12.43"
-                  column3="0"
-                  column4="1.1M"
-                  column5="48.7%"
-                  column6="10X"
-                />
-              </div>
-            </div>
-
-            <div className="Grid">
-              <div>
-                <GridItem
-                  head="Stake"
-                  title="12.43 CUBE/ETH LP"
-                  input="APPROVE"
-                  delay="100"
-                />
-              </div>
-              <div>
-                <GridItem
-                  head="Unstake"
-                  title="12.43 CUBE/ETH LP"
-                  input="UNSTAKE"
-                  delay="400"
-                />
-              </div>
-              <div>
-                <GridItem
-                  head="Rewards"
-                  title="12213 $CUBE"
-                  input="HARVEST"
-                  delay="700"
-                />
-              </div>
-            </div>
-
-            <div className="TableDesktop">
-              <TableData
-                datadelay="100"
-                classNameData="TableData"
-                column1="CUBE/ETH"
-                column2="12.43"
-                column3="0"
-                column4="1.1M"
-                column5="48.7%"
-                column6="10X"
-              />
-              <TableData
-                datadelay="500"
-                classNameData="TableData"
-                column1="CUBE/ETH"
-                column2="12.43"
-                column3="0"
-                column4="1.1M"
-                column5="48.7%"
-                column6="10X"
-              />
-              <TableData
-                datadelay="900"
-                classNameData="TableData"
-                column1="CUBE/ETH"
-                column2="12.43"
-                column3="0"
-                column4="1.1M"
-                column5="48.7%"
-                column6="10X"
-              />
-              <TableData
-                datadelay="1300"
-                classNameData="TableData"
-                column1="CUBE/ETH"
-                column2="12.43"
-                column3="0"
-                column4="1.1M"
-                column5="48.7%"
-                column6="10X"
-              />
-              <TableData
-                datadelay="1700"
-                classNameData="TableData"
-                column1="CUBE/ETH"
-                column2="12.43"
-                column3="0"
-                column4="1.1M"
-                column5="48.7%"
-                column6="10X"
-              />
-              <TableData
-                datadelay="2100"
-                classNameData="TableData"
-                column1="CUBE/ETH"
-                column2="12.43"
-                column3="0"
-                column4="1.1M"
-                column5="48.7%"
-                column6="10X"
-              />
-              {/* <TableData classNameData="TableData" column1="CUBE/ETH" column2="12.43" column3="0" column4="1.1M" column5="48.7%" column6="10X" /> */}
-            </div>
-
-            <div className="TableDataMobile">
-              <div>
-                <TableDataMobile
-                  datadelay="100"
-                  classNameData="TableData"
-                  column1="CUBE/ETH"
-                  column2="12.43"
-                  column3="0"
-                  column4="1.1M"
-                  column5="48.7%"
-                  column6="10X"
-                />
-              </div>
-              <div>
-                <TableDataMobile
-                  datadelay="500"
-                  classNameData="TableData"
-                  column1="CUBE/ETH"
-                  column2="12.43"
-                  column3="0"
-                  column4="1.1M"
-                  column5="48.7%"
-                  column6="10X"
-                />
-              </div>
-              <div>
-                <TableDataMobile
+                <TableData
                   datadelay="900"
                   classNameData="TableData"
                   column1="CUBE/ETH"
@@ -353,8 +202,91 @@ const Farms = (props) => {
                   column6="10X"
                 />
               </div>
-              <div>
-                <TableDataMobile
+  
+              <div className="TopTableMobile">
+                <div>
+                  <TableHeadMobile
+                    classNameHead="TableHead"
+                    column1="POOL"
+                    column2="BALANCE"
+                    column3="DEPOSITED"
+                    column4="TVL"
+                    column5="APY"
+                    column6="BOOST"
+                  />
+                </div>
+                <div>
+                  <TableDataMobile
+                    classNameData="TableData"
+                    column1="CUBE/ETH"
+                    column2="12.43"
+                    column3="0"
+                    column4="1.1M"
+                    column5="48.7%"
+                    column6="10X"
+                  />
+                </div>
+              </div>
+  
+              <div className="Grid">
+                <div>
+                  <GridItem
+                    head="Stake"
+                    title="12.43 CUBE/ETH LP"
+                    input="APPROVE"
+                    delay="100"
+                  />
+                </div>
+                <div>
+                  <GridItem
+                    head="Unstake"
+                    title="12.43 CUBE/ETH LP"
+                    input="UNSTAKE"
+                    delay="400"
+                  />
+                </div>
+                <div>
+                  <GridItem
+                    head="Rewards"
+                    title="12213 $CUBE"
+                    input="HARVEST"
+                    delay="700"
+                  />
+                </div>
+              </div>
+  
+              <div className="TableDesktop">
+                <TableData
+                  datadelay="100"
+                  classNameData="TableData"
+                  column1="CUBE/ETH"
+                  column2="12.43"
+                  column3="0"
+                  column4="1.1M"
+                  column5="48.7%"
+                  column6="10X"
+                />
+                <TableData
+                  datadelay="500"
+                  classNameData="TableData"
+                  column1="CUBE/ETH"
+                  column2="12.43"
+                  column3="0"
+                  column4="1.1M"
+                  column5="48.7%"
+                  column6="10X"
+                />
+                <TableData
+                  datadelay="900"
+                  classNameData="TableData"
+                  column1="CUBE/ETH"
+                  column2="12.43"
+                  column3="0"
+                  column4="1.1M"
+                  column5="48.7%"
+                  column6="10X"
+                />
+                <TableData
                   datadelay="1300"
                   classNameData="TableData"
                   column1="CUBE/ETH"
@@ -364,9 +296,7 @@ const Farms = (props) => {
                   column5="48.7%"
                   column6="10X"
                 />
-              </div>
-              <div>
-                <TableDataMobile
+                <TableData
                   datadelay="1700"
                   classNameData="TableData"
                   column1="CUBE/ETH"
@@ -376,9 +306,7 @@ const Farms = (props) => {
                   column5="48.7%"
                   column6="10X"
                 />
-              </div>
-              <div>
-                <TableDataMobile
+                <TableData
                   datadelay="2100"
                   classNameData="TableData"
                   column1="CUBE/ETH"
@@ -388,16 +316,100 @@ const Farms = (props) => {
                   column5="48.7%"
                   column6="10X"
                 />
+                {/* <TableData classNameData="TableData" column1="CUBE/ETH" column2="12.43" column3="0" column4="1.1M" column5="48.7%" column6="10X" /> */}
               </div>
-              {/* <div><TableDataMobile classNameData="TableData" column1="CUBE/ETH" column2="12.43" column3="0" column4="1.1M" column5="48.7%" column6="10X" /></div> */}
+  
+              <div className="TableDataMobile">
+                <div>
+                  <TableDataMobile
+                    datadelay="100"
+                    classNameData="TableData"
+                    column1="CUBE/ETH"
+                    column2="12.43"
+                    column3="0"
+                    column4="1.1M"
+                    column5="48.7%"
+                    column6="10X"
+                  />
+                </div>
+                <div>
+                  <TableDataMobile
+                    datadelay="500"
+                    classNameData="TableData"
+                    column1="CUBE/ETH"
+                    column2="12.43"
+                    column3="0"
+                    column4="1.1M"
+                    column5="48.7%"
+                    column6="10X"
+                  />
+                </div>
+                <div>
+                  <TableDataMobile
+                    datadelay="900"
+                    classNameData="TableData"
+                    column1="CUBE/ETH"
+                    column2="12.43"
+                    column3="0"
+                    column4="1.1M"
+                    column5="48.7%"
+                    column6="10X"
+                  />
+                </div>
+                <div>
+                  <TableDataMobile
+                    datadelay="1300"
+                    classNameData="TableData"
+                    column1="CUBE/ETH"
+                    column2="12.43"
+                    column3="0"
+                    column4="1.1M"
+                    column5="48.7%"
+                    column6="10X"
+                  />
+                </div>
+                <div>
+                  <TableDataMobile
+                    datadelay="1700"
+                    classNameData="TableData"
+                    column1="CUBE/ETH"
+                    column2="12.43"
+                    column3="0"
+                    column4="1.1M"
+                    column5="48.7%"
+                    column6="10X"
+                  />
+                </div>
+                <div>
+                  <TableDataMobile
+                    datadelay="2100"
+                    classNameData="TableData"
+                    column1="CUBE/ETH"
+                    column2="12.43"
+                    column3="0"
+                    column4="1.1M"
+                    column5="48.7%"
+                    column6="10X"
+                  />
+                </div>
+                {/* <div><TableDataMobile classNameData="TableData" column1="CUBE/ETH" column2="12.43" column3="0" column4="1.1M" column5="48.7%" column6="10X" /></div> */}
+              </div>
             </div>
-          </div>
-        </div>{" "}
-        {/* FarmContainer */}
-      </div>{" "}
+          </div>{" "}
+          {/* FarmContainer */}
+        </div>{" "}</>
+      
+      }
+      
       {/* MainContainer2 */}
     </div>
   );
 };
 
-export default Farms;
+const mapStateToProps = ( state ) =>{
+  return {
+    isOpen : state.isOpen 
+  }
+}
+
+export default connect(mapStateToProps)(Farms);

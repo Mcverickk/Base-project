@@ -12,6 +12,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import Cube from "./cube.png";
 import Eth from "./eth.png";
 import { ethers } from "ethers";
+import { connect } from 'react-redux'
+import MobileNavbar from "../MobileNavbar/MobileNavbar";
 
 function Swap(props) {
   useEffect(() => {
@@ -34,7 +36,8 @@ function Swap(props) {
       <div className="Navbar">
         <Navbar />
       </div>
-      <div className="MainContainer">
+      {
+        props.isOpen ? <div><MobileNavbar /></div>:<><div className="MainContainer">
         <div className="Sidebar">
           <SideBar />
         </div>
@@ -147,9 +150,19 @@ function Swap(props) {
             </div>
           </div>
         </div>
-      </div>
+      </div></> 
+      }
+      
+      
     </div>
   );
 }
 
-export default Swap;
+const mapStateToProps = ( state ) =>{
+  return {
+   isOpen : state.isOpen 
+  }
+}
+
+
+export default connect(mapStateToProps)(Swap);

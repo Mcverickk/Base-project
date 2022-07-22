@@ -10,6 +10,8 @@ import { HiOutlineCog } from "react-icons/hi";
 import { HiOutlinePlus } from "react-icons/hi";
 import { NavLink } from "react-router-dom";
 import { ethers } from "ethers";
+import { connect } from 'react-redux'
+import MobileNavbar from "../MobileNavbar/MobileNavbar";
 
 const TableHead = ({
   column1,
@@ -209,7 +211,8 @@ const Liquidity = (props) => {
       <div className="Navbar">
         <Navbar />
       </div>
-      <div className="MainContainer3">
+      {
+        props.isOpen ? <div><MobileNavbar /></div>:<><div className="MainContainer3">
         <div className="Sidebar2">
           <SideBar />
         </div>
@@ -396,10 +399,19 @@ const Liquidity = (props) => {
           </div>
         </div>{" "}
         {/* LiquidityContainer */}
-      </div>{" "}
+      </div>{" "}</>
+      }
+      
       {/* MainContainer3 */}
     </div>
   );
 };
 
-export default Liquidity;
+const mapStateToProps = ( state ) =>{
+  return {
+   isOpen : state.isOpen 
+  }
+}
+
+
+export default connect(mapStateToProps)(Liquidity);
