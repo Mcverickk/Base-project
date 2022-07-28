@@ -1,433 +1,442 @@
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');  
- @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
- 
- .MainContainer3{
-     display: grid;
-     grid-template-columns: 20% 80%;
- }
- 
- .LiquidityContainer{
-     background-image: linear-gradient(#02181C, #02181C);
-     height: auto;
-     padding: 50px;
- }
- 
- .AddressContainer{
-     width: 15%;
-     margin: auto 0px auto auto;
-     padding: 10px;
-     color: #fff;
-     border: 2px solid rgba(213, 213, 213, 0.2);
-     border-radius: 18px;
-     font-family: 'Poppins';
-     font-style: normal;
-     font-weight: 500;
-     font-size: 0.9em;
-     text-align: center;
-     overflow: hidden;
- }
- 
- .FormContainer{ 
-     float: none;
-     margin: 1% auto;
-     width: 36%;
- }
- 
- .EllipseOne{
-     position: absolute;
-     width: 30%;
-     height: 10%;
-     z-index: -  1;
-     margin-left: 50px;
-     background: #157D7F;
-     filter: blur(70px);
- }
- 
- .FormContainer h1{
-     text-transform: uppercase;
-     font-weight: 900;
-     font-family: 'Poppins';
-     font-style: normal;
-     color: #fff;
-     display: flex;
-     justify-content: space-between;
- }
- 
- .FormContainer form{
-     padding: 20px;
-     display: flex;
-     flex-direction: column;
-     margin-top:2em;
-     background: #171717;
-     box-shadow: 0px 1px 2px rgba(120, 120, 120, 0.3), 0px 0px 3px rgba(167, 167, 167, 0.35);
-     border-radius: 18px;
- }
- 
- form div:nth-of-type(2n-1){
-     padding:5px 10px 5px 10px;
-     background: #323232;
-     border: 1px solid #4B4B4B;
-     border-radius: 16px;
-     margin-bottom: 16px;
-     display: flex;
-     justify-content: space-between;
- }
- 
- form > div >input{
-     color:#fff;
-     background-color:transparent;
-     border:none;
-     outline: none;
- }
- 
- form div:nth-of-type(2){
-     padding: 8px;
-     background: #323232;
-     border: 5px solid #171717;
-     margin: -30px auto -30px auto;
-     border-radius: 100%;
- }
- 
- form div:nth-of-type(3){
-     z-index: -1;
- }
- 
- .select {
-     color:#fff;
-     border:none;
-     background-color:transparent;
-     font-family: 'Poppins';
-     font-style: normal;
-     font-weight: 600;
-     font-size: 1em;
-     display: flex;
-     align-items: center;
-     color: #FFFFFF;
-     padding: 0.3em;
- }
- 
- .option{
-     background-color: #02181C;
-     font-family: 'Poppins';
-     font-style: normal;
-     font-weight: 600;
-     font-size: 1em;
-     display: flex;
-     color: #FFFFFF;
-     border: none;
- }
- 
- 
- form button[type="submit"]{
-     background: linear-gradient(269.56deg, #CEF287 14.68%, #0EE9E8 90.69%);
-     border-radius: 16px;
-     padding:18px;
-     text-transform: uppercase;
-     font-family: 'Poppins';
-     font-style: normal;
-     margin-top: 0.5em;
-     font-weight: 600;
-     font-size: 0.8em;
-     align-items: center;
-     letter-spacing: 0.75px;
-     color: #000000;
- }
- 
- .EllipseTwo{
-     position: absolute;
-     width: 30%;
-     height: 8%;
-     z-index: -  1;
-     margin-left: 50px;
-     background: #CEF287;
-     opacity: 0.5;
-     filter: blur(80px);
- }
- 
- .DataTable{
-    width: 35%;
-    margin: auto;
- }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 
- .LeftData{
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    color: rgba(183,183,183,0.7);
+.MainContainer3 {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.LiquidityContainer {
+  background-image: linear-gradient(#02181c, #02181c);
+  height: auto;
+  padding: 50px;
+}
+
+.AddressContainer {
+  width: 15%;
+  margin: auto 0px auto auto;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid rgba(213, 213, 213, 0.2);
+  border-radius: 18px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.9em;
+  text-align: center;
+  overflow: hidden;
+}
+
+.FormContainer {
+  float: none;
+  margin: 1% auto;
+  width: 36%;
+}
+
+.EllipseOne {
+  position: absolute;
+  width: 30%;
+  height: 10%;
+  z-index: -1;
+  margin-left: 50px;
+  background: #157d7f;
+  filter: blur(70px);
+}
+
+.FormContainer h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: "Poppins";
+  font-style: normal;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.FormContainer form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+  background: #171717;
+  box-shadow: 0px 1px 2px rgba(120, 120, 120, 0.3),
+    0px 0px 3px rgba(167, 167, 167, 0.35);
+  border-radius: 18px;
+}
+
+form div:nth-of-type(2n-1) {
+  padding: 5px 10px 5px 10px;
+  background: #323232;
+  border: 1px solid #4b4b4b;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+form > div > input {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+form div:nth-of-type(2) {
+  padding: 8px;
+  background: #323232;
+  border: 5px solid #171717;
+  margin: -30px auto -30px auto;
+  border-radius: 100%;
+}
+
+form div:nth-of-type(3) {
+  z-index: -1;
+}
+
+.select {
+  color: #fff;
+  border: none;
+  background-color: transparent;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  padding: 0.3em;
+}
+
+.option {
+  background-color: #02181c;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1em;
+  display: flex;
+  color: #ffffff;
+  border: none;
+}
+
+.buttons {
+  background: linear-gradient(269.56deg, #cef287 14.68%, #0ee9e8 90.69%);
+  border-radius: 16px;
+  padding: 18px;
+  text-transform: uppercase;
+  font-family: "Poppins";
+  font-style: normal;
+  margin-top: 0.5em;
+  font-weight: 600;
+  font-size: 0.8em;
+  align-items: center;
+  letter-spacing: 0.75px;
+  color: #000000;
+}
+
+.EllipseTwo {
+  position: absolute;
+  width: 30%;
+  height: 8%;
+  z-index: -1;
+  margin-left: 50px;
+  background: #cef287;
+  opacity: 0.5;
+  filter: blur(80px);
+}
+
+.DataTable {
+  width: 35%;
+  margin: auto;
+}
+
+.LeftData {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: rgba(183, 183, 183, 0.7);
+  padding: 10px;
+}
+
+.RightData {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.Details {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.8em;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  color: #818181;
+  margin-top: 5em;
+}
+
+.DataTable > h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-top: 3em;
+  color: #ffffff;
+}
+
+.TableHead2 {
+  /* border: 2px red solid;  */
+  /* width: 25%;   */
+  padding: 10px 0px 10px 0px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.8em;
+  /* text-align: center; */
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.TableHead2:first-of-type {
+  width: 30%;
+}
+
+.TableHead2:nth-of-type(3) {
+  text-align: right;
+}
+.TableHead2:nth-of-type(4) {
+  text-align: center;
+}
+
+.TableData2 {
+  /* border: 2px red solid; */
+  /* width: 25%;   */
+  padding: 10px 0px 10px 0px;
+  border-top: 1px solid rgba(183, 183, 183, 0.2);
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.8em;
+  /* text-align: center; */
+  color: #ffffff;
+}
+
+.TableData2:first-of-type {
+  width: 30%;
+}
+
+@media screen and (min-width: 320px) {
+  .MainContainer3 {
+    grid-template-columns: auto;
+  }
+
+  .Sidebar2 {
+    display: none;
+  }
+
+  .AddressContainer {
+    display: none;
+  }
+
+  .LiquidityContainer {
+    padding: 20px 20px 100px 20px;
+  }
+
+  .FormContainer {
+    width: 100%;
+  }
+
+  .FormContainer form {
+    padding: 15px;
+  }
+
+  form div:nth-of-type(2n-1) {
+    padding: 2px;
+  }
+
+  form > div > input {
     padding: 10px;
- }
+  }
 
- .RightData{
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: right;
-    color: #FFFFFF;
-    padding: 10px;
- }
-
- .Details{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 300;
+  form button[type="submit"] {
+    margin-top: 0.2em;
     font-size: 0.8em;
+  }
+
+  .Data {
+    margin-top: 1em;
+    font-size: 1.6em;
+  }
+
+  .inputMax {
+    font-size: 0.8em;
+  }
+
+  .option {
+    font-size: 1em;
+  }
+
+  .select {
+    font-size: 0.8em;
+    padding-top: 10px;
+  }
+
+  .LeftData {
+    font-size: 0.8em;
+  }
+  .RightData {
+    font-size: 0.8em;
+  }
+  .Details {
+    font-size: 0.7em;
+    margin-top: 1em;
+  }
+  .DataTable > h1 {
+    margin-top: 0.8em;
+  }
+  .DataTable {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  form button[type="submit"] {
+    font-size: 0.9em;
+  }
+
+  .Data {
+    font-size: 1.7em;
+  }
+
+  .LiquidityContainer {
+    padding: 40px 40px 100px 40px;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  form button[type="submit"] {
+    font-size: 0.8em;
+  }
+
+  .FormContainer {
+    width: 90%;
+  }
+
+  .LiquidityContainer {
+    padding: 50px 50px 100px 50px;
+  }
+
+  .Data {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .MainContainer3 {
+    grid-template-columns: 20% 80%;
+  }
+
+  .Sidebar2 {
+    display: block;
+  }
+
+  .AddressContainer {
+    display: block;
+    width: 20%;
+  }
+
+  .FormContainer {
     width: 80%;
-    margin: auto;
-    text-align: center;
-    color: #818181;
-    margin-top: 5em;
- }
+    margin-top: 2.5em;
+  }
 
- .DataTable > h1{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.2em;
-    margin-top: 3em;
-    color: #FFFFFF;
- }
+  .LiquidityContainer {
+    padding: 42px 50px 100px 50px;
+  }
 
- .TableHead2{
-    /* border: 2px red solid;  */
-    /* width: 25%;   */
-    padding: 10px 0px 10px 0px;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 0.8em;
-    /* text-align: center; */
-    color: rgba(255, 255, 255, 0.5);
- }
+  .Data {
+    font-size: 1.8em;
+    margin-top: 1em;
+  }
 
- .TableHead2:first-of-type{
-    width: 30%;
- }
+  .DataTable {
+    width: 80%;
+  }
+}
 
- .TableHead2:nth-of-type(3){
-    text-align: right;
- }
- .TableHead2:nth-of-type(4){
-    text-align: center;
- }
+@media screen and (min-width: 1000px) {
+  .FormContainer {
+    width: 65%;
+  }
 
+  form button[type="submit"] {
+    font-size: 0.85em;
+  }
 
- .TableData2{
-    /* border: 2px red solid; */
-    /* width: 25%;   */
-    padding: 10px 0px 10px 0px;
-    border-top: 1px solid rgba(183, 183, 183, 0.2);
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 0.8em;
-    /* text-align: center; */
-    color: #FFFFFF;
- }
+  .Data {
+    font-size: 1.9em;
+  }
 
- .TableData2:first-of-type{
-    width: 30%;
- }
+  .DataTable {
+    width: 65%;
+  }
+}
 
- 
- @media screen and (min-width:320px){ 
-     .MainContainer3{
-         grid-template-columns: auto;
-     }
-     
-     .Sidebar2{
-        display: none;
-     }
+@media screen and (min-width: 1400px) {
+  .FormContainer {
+    width: 45%;
+  }
 
-     .AddressContainer{
-         display:none;
-     }
- 
-     .LiquidityContainer{
-         padding: 20px 20px 100px 20px;
-     }
- 
-     .FormContainer{ 
-         width: 100%;
-     }
- 
-     .FormContainer form{
-         padding: 15px;
-     }
- 
-     form div:nth-of-type(2n-1){
-         padding: 2px;
-     }
- 
-     form > div >input{
-         padding: 10px;
-     }
- 
-     form button[type="submit"]{
-         margin-top: 0.2em;
-         font-size: 0.8em;
-     }
- 
-     .Data{
-         margin-top: 1em;
-         font-size: 1.6em;
-     }
+  form {
+    padding: 20px;
+  }
 
-     .inputMax{
-         font-size: 0.8em;
-     }
- 
-     .option{
-         font-size: 1em;
-     }
- 
-     .select{
-         font-size: 0.8em;
-         padding-top: 10px;
-     }
+  .inputMax {
+    font-size: 1em;
+  }
 
-     .LeftData{ font-size: 0.8em ;}
-     .RightData{ font-size: 0.8em ;}
-     .Details{ font-size: 0.7em;margin-top: 1em;}
-     .DataTable > h1 { margin-top: 0.8em;}
-     .DataTable{width: 100%;}
- }
- 
- 
- @media screen and (min-width:425px){ 
- 
-     form button[type="submit"]{
-         font-size: 0.9em;
-     }
- 
-     .Data{
-         font-size: 1.7em;
-     }
- 
-     .LiquidityContainer{
-         padding: 40px 40px 100px 40px;
-     }
- }
- 
- @media screen and (min-width:550px){ 
- 
-     form button[type="submit"]{
-         font-size: 0.8em;
-     }
- 
-     .FormContainer{
-         width: 90%;
-     }
- 
-     .LiquidityContainer{
-         padding: 50px 50px 100px 50px;
-     }
- 
-     .Data{
-         font-size: 1.8em;
-     }
- }
- 
- @media screen and (min-width:768px){ 
-     .MainContainer3{
-         grid-template-columns: 20% 80%;
-     }
-     
-     .Sidebar2{
-        display: block;
-     }
+  form button[type="submit"] {
+    font-size: 0.9em;
+  }
 
-     .AddressContainer{
-         display: block;
-         width: 20%;
-     }
- 
-     .FormContainer{
-         width: 80%;
-         margin-top: 2.5em;
-     }
-     
-     .LiquidityContainer{
-         padding: 42px 50px 100px 50px;
-     }
- 
-     .Data{
-         font-size: 1.8em;
-         margin-top: 1em;
-     }
+  .Data {
+    font-size: 2em;
+  }
 
-     .DataTable{width: 80%;}
+  .DataTable {
+    width: 45%;
+  }
+}
 
- }
- 
- @media screen and (min-width:1000px){ 
-     .FormContainer{
-         width: 65%;
-     }
-     
-     form button[type="submit"]{
-         font-size: 0.85em;
-     }
- 
-     .Data{
-         font-size: 1.9em;
-     }
+@media screen and (min-width: 1500px) {
+  form button[type="submit"] {
+    margin-top: 8px;
+    font-size: 1em;
+  }
 
-     .DataTable{width: 65%;}
+  .Data {
+    font-size: 2.1em;
+  }
 
- }
- 
- @media screen and (min-width:1400px){ 
-     .FormContainer{
-         width: 45%;
-     }
- 
-     form{
-         padding: 20px;
-     }
-     
-     .inputMax{
-         font-size: 1em;
-     }
-     
-     form button[type="submit"]{
-         font-size: 0.9em;
-     }
- 
-     .Data{
-         font-size: 2em;
-     }
+  .inputMax {
+    font-size: 1.1em;
+  }
 
-     .DataTable{width: 45%;}
- }
- 
- @media screen and (min-width:1500px){ 
-     
-     form button[type="submit"]{
-         margin-top: 8px;
-         font-size: 1em;
-     }
- 
-     .Data{
-         font-size: 2.1em;
-     }
- 
-     .inputMax{
-         font-size: 1.1em;
-     }
- 
-     .option{
-         font-size: 1em;
-     }
- 
-     .select{
-         font-size: 1em;
-     }
- }
+  .option {
+    font-size: 1em;
+  }
+
+  .select {
+    font-size: 1em;
+  }
+}
