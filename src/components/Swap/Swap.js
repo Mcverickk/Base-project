@@ -1091,67 +1091,73 @@ function Swap(props) {
 
   const handleSwap = async (event) => {
     event.preventDefault();
-    // amountOutMin must be retrieved from an oracle of some kind
-    try {
-      const address = await props.signer.getAddress();
+    if (props.isConnected === true) {
+      try {
+        const address = await props.signer.getAddress();
 
-      const routerContract = await new ethers.Contract(
-        routerAddress,
-        routerABI,
-        props.signer
-      );
-
-      const path = [];
-
-      if (inputValue.token === "CUBE") {
-        path[0] = WCUBEaddress;
-        path[1] = ETHaddress;
-        console.log("bjbjb");
-        await routerContract.swapExactETHForTokens(
-          0,
-          path,
-          address,
-          846468486468648,
-          {
-            value: ethers.utils
-              .parseEther(inputValue.value.toString())
-              .toString(),
-          }
+        const routerContract = await new ethers.Contract(
+          routerAddress,
+          routerABI,
+          props.signer
         );
-      } else if (inputValue.token === "ETH") {
-        path[0] = ETHaddress;
-        path[1] = WCUBEaddress;
 
-        await routerContract.swapExactTokensForETH(
-          ethers.utils.parseEther(inputValue.value.toString()).toString(),
-          0,
-          path,
-          address,
-          846468486468648
-        );
+        const path = [];
+
+        if (inputValue.token === "CUBE") {
+          path[0] = WCUBEaddress;
+          path[1] = ETHaddress;
+          console.log("bjbjb");
+          await routerContract.swapExactETHForTokens(
+            0,
+            path,
+            address,
+            846468486468648,
+            {
+              value: ethers.utils
+                .parseEther(inputValue.value.toString())
+                .toString(),
+            }
+          );
+        } else if (inputValue.token === "ETH") {
+          path[0] = ETHaddress;
+          path[1] = WCUBEaddress;
+
+          await routerContract.swapExactTokensForETH(
+            ethers.utils.parseEther(inputValue.value.toString()).toString(),
+            0,
+            path,
+            address,
+            846468486468648
+          );
+        }
+      } catch (e) {
+        console.log(e);
       }
-    } catch (e) {
-      console.log(e);
+    } else {
+      alert("Connect Wallet");
     }
   };
 
   const handleApprove = async (event) => {
     event.preventDefault();
-
-    try {
-      const ETHcontract = await new ethers.Contract(
-        ETHaddress,
-        ETHabi,
-        props.signer
-      );
-      const value = inputValue.value * 2;
-      await ETHcontract.approve(
-        routerAddress,
-        ethers.utils.parseEther(value.toString()).toString()
-      );
-      setApproveButton(false);
-    } catch (e) {
-      console.log(e);
+    if (props.isConnected === true) {
+      try {
+        const ETHcontract = await new ethers.Contract(
+          ETHaddress,
+          ETHabi,
+          props.signer
+        );
+        const value = inputValue.value * 2;
+        await ETHcontract.approve(
+          routerAddress,
+          ethers.utils.parseEther(value.toString()).toString()
+        );
+        setApproveButton(false);
+      } catch (e) {
+        console.log(e);
+      }
+    } else {
+      alert("Connect Wallet");
     }
   };
 

@@ -1114,45 +1114,63 @@ const Liquidity = (props) => {
 
   const handleApprove = async (event) => {
     event.preventDefault();
-    const ETHcontract = await new ethers.Contract(
-      ETHaddress,
-      ETHabi,
-      props.signer
-    );
-    const value = inputValue.value * factor * 2;
-    const tx = await ETHcontract.approve(
-      routerAddress,
-      ethers.utils.parseEther(value.toString()).toString()
-    );
-    console.log(tx);
+    if (props.isConnected === true) {
+      try {
+        const ETHcontract = await new ethers.Contract(
+          ETHaddress,
+          ETHabi,
+          props.signer
+        );
+        const value = inputValue.value * factor * 2;
+        const tx = await ETHcontract.approve(
+          routerAddress,
+          ethers.utils.parseEther(value.toString()).toString()
+        );
+        console.log(tx);
+      } catch (e) {
+        console.log(e);
+      }
+    } else {
+      alert("Connect Wallet");
+    }
   };
 
   const handleAddLiquidity = async (event) => {
     event.preventDefault();
-    const address = await props.signer.getAddress();
+    if (props.isConnected === true) {
+      try {
+        const address = await props.signer.getAddress();
 
-    const routerContract = await new ethers.Contract(
-      routerAddress,
-      routerABI,
-      props.signer
-    );
+        const routerContract = await new ethers.Contract(
+          routerAddress,
+          routerABI,
+          props.signer
+        );
 
-    const ethValue = inputValue.value * factor;
+        const ethValue = inputValue.value * factor;
 
-    console.log(ethers.utils.parseEther(ethValue.toString()).toString());
+        console.log(ethers.utils.parseEther(ethValue.toString()).toString());
 
-    const tx = await routerContract.addLiquidityETH(
-      ETHaddress,
-      ethers.utils.parseEther(ethValue.toString()).toString(),
-      0,
-      0,
-      address,
-      78787878787878,
-      {
-        value: ethers.utils.parseEther(inputValue.value.toString()).toString(),
+        const tx = await routerContract.addLiquidityETH(
+          ETHaddress,
+          ethers.utils.parseEther(ethValue.toString()).toString(),
+          0,
+          0,
+          address,
+          78787878787878,
+          {
+            value: ethers.utils
+              .parseEther(inputValue.value.toString())
+              .toString(),
+          }
+        );
+        console.log(tx);
+      } catch (e) {
+        console.log(e);
       }
-    );
-    console.log(tx);
+    } else {
+      alert("Connect Wallet");
+    }
   };
 
   return (

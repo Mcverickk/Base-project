@@ -18,6 +18,22 @@ function App() {
     let sign;
     if (typeof window.ethereum !== "undefined") {
       try {
+        await window.ethereum.request({
+          method: "wallet_addEthereumChain",
+          params: [
+            {
+              chainId: "0x71B",
+              rpcUrls: ["https://http-testnet.cube.network/"],
+              chainName: "Cube Testnet",
+              nativeCurrency: {
+                name: "CUBE",
+                symbol: "CUBE",
+                decimals: 18,
+              },
+              blockExplorerUrls: ["https://testnet.cubescan.network/"],
+            },
+          ],
+        });
         prov = await new ethers.providers.Web3Provider(window.ethereum);
         const accounts = await prov.send("eth_requestAccounts", []);
         setIsConnected(true);
