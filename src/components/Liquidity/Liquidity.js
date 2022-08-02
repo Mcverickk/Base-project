@@ -1257,7 +1257,7 @@ const Liquidity = (props) => {
                     // value="APPROVE TO LP POOL"
                     onClick={handleAddLiquidity}
                   >
-                    APPROVE TO LP POOL
+                    ADD LIQUIDITY
                   </button>
                 </form>
 

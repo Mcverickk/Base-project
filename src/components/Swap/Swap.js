@@ -1068,37 +1068,77 @@ function Swap(props) {
   ];
 
   const [inputValue, setInputValue] = useState({ value: "", token: "CUBE" });
+  const [swapAmount, setSwapAmount] = useState();
+  const [approveButton, setApproveButton] = useState(false);
 
-  const handleInput = (event) => {
+  useEffect(() => {
+    swapValue();
+    handleApproveButton();
+  }, [inputValue]);
+
+  const handleInput = async (event) => {
     const name = event.target.name;
     const value = event.target.value;
     setInputValue((prevInputValue) => ({ ...prevInputValue, [name]: value }));
     console.log(inputValue);
   };
 
+  const handleApproveButton = () => {
+    inputValue.token === "ETH"
+      ? setApproveButton(true)
+      : setApproveButton(false);
+  };
+
   const handleSwap = async (event) => {
     event.preventDefault();
     // amountOutMin must be retrieved from an oracle of some kind
+    try {
+      const address = await props.signer.getAddress();
 
-    const address = await props.signer.getAddress();
+      const routerContract = await new ethers.Contract(
+        routerAddress,
+        routerABI,
+        props.signer
+      );
 
-    const routerContract = await new ethers.Contract(
-      routerAddress,
-      routerABI,
-      props.signer
-    );
+      const path = [];
 
-    // require(DAI.approve(address(UniswapV2Router02), amountIn), 'approve failed.');
+      if (inputValue.token === "CUBE") {
+        path[0] = WCUBEaddress;
+        path[1] = ETHaddress;
+        console.log("bjbjb");
+        await routerContract.swapExactETHForTokens(
+          0,
+          path,
+          address,
+          846468486468648,
+          {
+            value: ethers.utils
+              .parseEther(inputValue.value.toString())
+              .toString(),
+          }
+        );
+      } else if (inputValue.token === "ETH") {
+        path[0] = ETHaddress;
+        path[1] = WCUBEaddress;
 
-    const path = [];
+        await routerContract.swapExactTokensForETH(
+          ethers.utils.parseEther(inputValue.value.toString()).toString(),
+          0,
+          path,
+          address,
+          846468486468648
+        );
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
-    if (inputValue.token === "CUBE") {
-      path[0] = WCUBEaddress;
-      path[1] = ETHaddress;
-    } else if (inputValue.token === "ETH") {
-      path[0] = ETHaddress;
-      path[1] = WCUBEaddress;
+  const handleApprove = async (event) => {
+    event.preventDefault();
 
+    try {
       const ETHcontract = await new ethers.Contract(
         ETHaddress,
         ETHabi,
@@ -1109,15 +1149,43 @@ function Swap(props) {
         routerAddress,
         ethers.utils.parseEther(value.toString()).toString()
       );
+      setApproveButton(false);
+    } catch (e) {
+      console.log(e);
     }
+  };
 
-    await routerContract.swapExactTokensForETH(
-      ethers.utils.parseEther(inputValue.value.toString()).toString(),
-      0,
-      path,
-      address,
-      846468486468648
-    );
+  const swapValue = async () => {
+    try {
+      const routerContract = await new ethers.Contract(
+        routerAddress,
+        routerABI,
+        props.signer
+      );
+      const path = [];
+
+      if (inputValue.token === "CUBE") {
+        path[0] = WCUBEaddress;
+        path[1] = ETHaddress;
+      } else if (inputValue.token === "ETH") {
+        path[0] = ETHaddress;
+        path[1] = WCUBEaddress;
+      }
+      let amount;
+      if (inputValue.value > 0) {
+        amount = await routerContract.getAmountsOut(
+          ethers.utils.parseEther(inputValue.value.toString()).toString(),
+          path
+        );
+        setSwapAmount(ethers.utils.formatEther(amount[1].toString()));
+
+        console.log(swapAmount);
+      } else if (inputValue !== "") {
+        setSwapAmount(0);
+      }
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (
@@ -1187,8 +1255,13 @@ function Swap(props) {
                   <div>
                     <IoIosArrowDown color="#fff" size={24} />
                   </div>
+
                   <div>
-                    <input className="inputMax" value="0.0 Max" />
+                    <input
+                      className="inputMax"
+                      placeholder="0.0 Max"
+                      value={swapAmount}
+                    />
                     <div
                       style={{
                         color: "#fff",
@@ -1209,9 +1282,15 @@ function Swap(props) {
                       </select>
                     </div>
                   </div>
-                  <button className="buttons" onClick={handleSwap}>
-                    CONFIRM SWAP
-                  </button>
+                  {approveButton === true ? (
+                    <button className="buttons" onClick={handleApprove}>
+                      APPROVE ETH
+                    </button>
+                  ) : (
+                    <button className="buttons" onClick={handleSwap}>
+                      CONFIRM SWAP
+                    </button>
+                  )}
                 </form>
 
                 <div className="EllipseTwo"></div>
